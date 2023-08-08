@@ -1,0 +1,19 @@
+.background {
+  background-image: url("/projects/personalproject/images/store.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contact-info {
+  font-family: "AkzidenzGrotesk-Cond";
+}
+.map-container iframe {
+  width: 100%;
+  margin-top: 50px;
+}
+.container ul li {
+  list-style: none;
+}
+.container ul {
+  padding-top: 30px;
+}

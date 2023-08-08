@@ -1,0 +1,137 @@
+.login-form {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  font-family: "AkzidenzGrotesk-Cond";
+}
+
+.new-member-container {
+  width: 600px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 70px 60px;
+  text-align: center;
+  height: 500px;
+  min-height: 300px;
+
+  border-radius: 15px;
+}
+.newmember-text {
+  line-height: 1.3em;
+  padding: 0 40px;
+  font-size: 17px;
+}
+.new-member-container p {
+  padding-top: 40px;
+}
+
+.sign-in-form {
+  border-radius: 12px;
+  width: 320px;
+  margin-left: 20px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  padding: 70px 10px;
+  height: 500px;
+}
+
+.btn-black {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 12px;
+  font-size: 18px;
+}
+.btn-black:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+
+.new-member-container a {
+  padding: 10px 60px;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+.sign-in-form button {
+  padding: 10px 15px;
+  font-family: "AkzidenzGrotesk-Cond";
+}
+
+.sign-in-form-row input {
+  padding: 12px 85px 10px 10px;
+  background-color: white;
+  border-radius: 12px;
+  margin-top: 10px;
+  outline: none;
+  color: black;
+}
+
+.sign-in-form a {
+  color: white;
+  text-decoration: none;
+}
+.sign-in-form-bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 870px) {
+  .login-form {
+    flex-direction: column;
+    padding: 0;
+  }
+  .newmember-text {
+    padding: 0;
+  }
+  .new-member-container a {
+    /* width: 100%; */
+    /* display: block; */
+    padding: 12px 40px;
+  }
+  .new-member-container {
+    padding: 50px;
+    width: 100%;
+    margin-bottom: 40px;
+    height: 350px;
+  }
+  .sign-in-form {
+    padding: 50px 10px;
+    width: 100%;
+    margin: 0;
+    height: 400px;
+  }
+  .wrapper {
+    padding: 20px;
+  }
+  .sign-in-form input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 340px) {
+  .new-member-container {
+    height: 450px;
+  }
+  .newmember-text {
+    font-size: 15px;
+  }
+  .new-member-container a {
+    width: 100%;
+    padding: 12px 20px;
+  }
+  .new-member-container {
+    padding: 80px 30px;
+  }
+  .sign-in-form-row input {
+    padding: 10px;
+  }
+}

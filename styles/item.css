@@ -1,0 +1,156 @@
+@font-face {
+  src: url("AkzidenzGrotesk-Cond.otf");
+  font-family: "AkzidenzGrotesk-Cond";
+}
+
+.item-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  padding-left: 200px;
+
+  font-family: "AkzidenzGrotesk-Cond";
+}
+.item-description {
+  width: 380px;
+  margin-left: 50px;
+}
+.item-description h2 {
+  padding: 30px 0;
+  font-weight: 100;
+  font-size: 35px;
+  /* font-family: "Nunito", sans-serif; */
+}
+
+.item-img {
+  width: 700px;
+  height: 700px;
+  border-radius: 20px;
+}
+.item-img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.item-pics {
+  display: flex;
+  flex-direction: column;
+}
+.item-pics img {
+  object-fit: cover;
+  margin: 0 10px 20px 0;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+}
+.item-pics img:hover {
+  opacity: 0.4;
+}
+.btn-container {
+  width: 350px;
+}
+.btn-grey {
+  padding: 10px;
+  width: 100%;
+}
+
+.back-link {
+  text-decoration: none;
+  color: black;
+}
+.sizes {
+  /* margin: 20px 80px 60px 0px; */
+}
+.sizes ul {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+  font-family: "Nunito", sans-serif;
+}
+.sizes ul li {
+  list-style: none;
+  border: 1px solid grey;
+  border-radius: 30px;
+  text-align: center;
+  width: 45px;
+  padding: 3px;
+  margin-right: 10px;
+}
+.sizes ul li:hover {
+  background-color: black;
+  color: white;
+}
+.btn-grey {
+  border-radius: 10px;
+  border: 1px solid black;
+  color: black;
+  background-color: transparent;
+}
+.btn-grey:disabled {
+  border: 1px solid grey;
+  color: grey;
+}
+.btn-grey:hover:not(:disabled) {
+  cursor: pointer;
+  font-weight: bold;
+}
+.item-description ul li {
+  list-style: none;
+}
+.item-description ul,
+.item-description p {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1425px) {
+  .item-container {
+    flex-direction: column;
+    padding: 0;
+    margin-top: 25px;
+  }
+  .item-description {
+    margin: 0;
+  }
+  .item-img {
+    width: 100%;
+  }
+  .item-pics {
+    flex-direction: row;
+  }
+  .item-pics img {
+    width: 100px;
+    height: 100px;
+  }
+  .sizes ul {
+    justify-content: flex-start;
+  }
+  .sizes ul li {
+    margin: 10px 15px 10px 0;
+  }
+  .btn-container {
+    width: 100%;
+  }
+  .item-pics {
+    overflow-y: auto;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .item-pics img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .item-img {
+    height: 500px;
+  }
+}
+
+.selected {
+  background-color: black;
+  color: white;
+}
+.clear-btn {
+  margin-bottom: 15px;
+}

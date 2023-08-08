@@ -1,0 +1,10 @@
+.purpose-content {
+  font-size: 15px;
+  text-align: center;
+  padding: 130px 0;
+}
+@media (max-width: 900px) {
+  .container p {
+    text-align: center;
+  }
+}

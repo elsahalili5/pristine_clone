@@ -1,0 +1,145 @@
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+
+  right: -100%;
+  bottom: 0;
+  width: 390px;
+  background-color: black;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 20px;
+  font-family: "AkzidenzGrotesk-Cond";
+  transition: 0.2s;
+}
+
+.cart-show {
+  right: 0;
+}
+
+.cart-items {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 30px;
+  overflow: auto;
+}
+.cart-item {
+  margin: 0px 9px;
+  min-height: 200px;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  padding: 25px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.checkout-btn {
+  padding: 10px 15px;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 12px;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+}
+.checkout-btn:hover {
+  background-color: gray;
+  border: 1px solid rgb(150, 149, 149);
+  color: black;
+}
+
+.cart-total {
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: black;
+  border: 1px solid white;
+  margin-bottom: 20px;
+  font-size: 20px;
+  width: 150px;
+  margin-left: 172px;
+}
+
+.cart-checkout-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 10px;
+}
+
+.x-icon {
+  font-size: 25px;
+}
+
+.image-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.product-quantity {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.quantity-btn {
+  border: none;
+  background: transparent;
+  font-size: 25px;
+  cursor: pointer;
+}
+.quantity-btn:hover {
+  color: rgb(104, 103, 103);
+}
+
+.left {
+  color: black;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.cart-item img {
+  max-width: 90%;
+  height: 110px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.x-btn {
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+  font-size: 27px;
+  margin-right: 3px;
+  top: 10px;
+  color: black;
+}
+.x-btn:hover {
+  color: #232222;
+}
+
+.remove-item {
+  display: none;
+}
+.item-quantity {
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+}
+.cart-quantity {
+  font-weight: 500;
+}

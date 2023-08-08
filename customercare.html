@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Care Pristine Original</title>
+    <link rel="stylesheet" href="./styles/customercare.css" />
+    <link rel="stylesheet" href="./styles/header_footer.css" />
+    <link rel="icon" href="./images/favicon.png" />
+    <link rel="stylesheet" href="./styles/cart.css" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <div class="left-nav" id="menu-item">
+            <ul>
+              <li><a href="home.html">HOME</a></li>
+              <li><a href="shop.html">SHOP</a></li>
+              <li><a href="authenticheck.html">AUTHENTICHECK</a></li>
+              <li><a href="purpose.html">THE PURPOSE</a></li>
+              <li><a href="login.html"></a></li>
+              <li><a href=""></a></li>
+            </ul>
+          </div>
+          <div class="logo">
+            <img class="default_logo" src="./images/pristine-logo1.svg " alt="" />
+            <img class="hover_logo" src="./images/hover-logo.svg" alt="" />
+          </div>
+          <div class="right-nav" id="menu-item-right">
+            <ul>
+              <li class="hidden" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
+              <li href="myaccount.html" class="hidden" id="myaccount"><span>MY ACCOUNT</span></li>
+              <li id="login-btn"><a href="login.html">LOGIN</a></li>
+              <li><span id="cart">CART</span> <span class="cart-quantity" id="cart-quantity">0</span></li>
+
+              <!-- <li class="hidden" id="logout-btn"><span>LOGOUT</span></li> -->
+            </ul>
+          </div>
+          <div class="menu-icon" id="menu-toggle">
+            <img src="./images/menu.png" alt="" />
+          </div>
+          <div class="menu-icon-x" id="menu-x">
+            <img src="./images/x.svg" alt="" />
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <p>CUSTOMER CARE</p>
+        <div class="customer-care-container">
+          <p>
+            <strong> Delivery Information</strong> <br />
+
+            Same day dispatch if ordered before 12pm on working days. <br />
+            Next day dispatch if ordered after 12pm on working days. <br />
+            Delivery within the European Union 24-48h. <br />
+            Rest of the world delivery 48-72H <br />
+            Please be aware that customers outside Kosovo may incur additional customs duties or taxes or other customs
+            requirements. <br />
+            Any such customs duties or taxes may be significant so please ensure you confirm the position before placing
+            your order. <br />
+            We are not responsible for any such customs duties, taxes or requirements, nor are we responsible for any
+            parcels returned for unpaid customs duties or taxes or non-compliance,and we will not issue refunds under
+            these circumstances. <br />
+            If you have any other delivery questions please contact us at info@prstine.com <br />
+            <br />
+            <strong>Returns</strong> <br />
+
+            All returns must be postmarked within seven (7) days of purchase date. <br />
+            Items in a brand new condition with all original tags and packaging can be returned for a refund within
+            seven (7) days of receiving your order. <br />
+            To return an item, place the item securely in its original packaging, include your proof of purchase and
+            mail your return to the following address : <br />
+
+            Pristine Original <br />
+            Attn : Returns <br />
+            49 Edith Durham <br />
+            Prishtina,10000 <br />
+            Kosovo <br />
+
+            Please note, you will be responsible for all return shipping charges and liability for lost or stolen
+            packages. We strongly recommend that you use a trackable method to mail your return. <br />
+
+            After receiving your return and inspecting the condition of your item, we will process your return. Please
+            allow at least seven days (7) from the receipt of your item to process your return. Refunds may take 1-2
+            billing cycles to appear on your credit card statement,depending on your credit card company. We will notify
+            you by email when your exchange has been processed. If any mistakes have been made on your order please
+            contact info@prstine.com and it will be rectified. <br />
+          </p>
+        </div>
+      </div>
+    </main>
+    <div class="cart-container" id="cart-container">
+      <div class="cart-header">
+        <h3>CART ITEMS</h3>
+        <ion-icon class="x-icon" id="x-icon" name="close-outline"></ion-icon>
+      </div>
+
+      <div class="cart-items" id="cart-items">
+        <div class="cart-item" id="cart-item"></div>
+      </div>
+
+      <div class="cart-checkout-wrapper">
+        <!-- <div> -->
+        <p class="cart-total">TOTAL: $<span id="cart-total-value"></span></p>
+        <!-- </div> -->
+
+        <button class="checkout-btn" id="checkout-btn">CHECK OUT</button>
+      </div>
+    </div>
+    <!-- BEGIN FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <h4>ALL RIGHTS RESERVED, PRISTINE 2023</h4>
+          <a href="">FEATURED IN GQ</a>
+          <a href="store.html">STORE</a>
+
+          <div class="footer-right">
+            <a class="first-link" href="">SITE POLICY</a>
+
+            <a href="">TERMS OF USE</a>
+            <a href="customercare.html">CUSTOMER CARE</a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <p>Copyright &copy; 2023-2024 Elsa Halili</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/shopping-cart.js"></script>
+  </body>
+</html>

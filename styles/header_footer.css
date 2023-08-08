@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@font-face {
+  src: url("AkzidenzGrotesk-Cond.otf");
+  font-family: "AkzidenzGrotesk-Cond";
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  font-family: "Nunito", sans-serif;
+
+  padding: 0 50px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  font-size: 12px;
+}
+
+.left-nav ul,
+.right-nav ul {
+  display: flex;
+  list-style: none;
+}
+.left-nav li a,
+.right-nav li a {
+  text-decoration: none;
+  padding: 8px;
+  color: black;
+}
+.right-nav li {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 140px;
+  height: 39px;
+  margin-right: 200px;
+  min-width: 100px;
+}
+.hover_logo {
+  display: none;
+}
+.logo:hover .hover_logo {
+  display: block;
+}
+.logo:hover .default_logo {
+  display: none;
+}
+main {
+  flex: 1;
+}
+.footer {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.footer h1 {
+  font-weight: lighter;
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+.footer-right a {
+  padding: 5px;
+}
+
+.footer-copyright {
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  font-size: 14px;
+  margin: 25px;
+}
+.menu-icon {
+  display: none;
+}
+.menu-icon-x {
+  display: none;
+}
+@media (max-width: 1000px) {
+  .logo {
+    margin-right: 15px;
+    /* width: 110px; */
+  }
+}
+@media (max-width: 870px) {
+  /* .navbar {
+    flex-direction: column;
+  }
+
+  .logo {
+    order: 3;
+  } */
+  .left-nav {
+    padding: 0;
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+  }
+  .right-nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+  }
+  .menu-icon {
+    display: block;
+    z-index: 9999;
+  }
+  .active ul li:nth-child(5) a::after {
+    content: "LOGIN";
+  }
+  .active ul li:nth-child(6) a::after {
+    content: "CART";
+  }
+  .active {
+    display: block;
+  }
+  .navbar {
+    justify-content: space-between;
+    margin: 1rem;
+  }
+  .show {
+    display: none;
+  }
+
+  .menu-icon-x {
+    display: none;
+  }
+  .show-x {
+    display: block !important;
+    z-index: 9999;
+  }
+  .right-nav ul {
+    height: 100%;
+    width: 100%;
+    margin-top: -10px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navbar ul {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo {
+    z-index: 9999;
+  }
+  .footer {
+    grid-template-columns: repeat(2, 2fr);
+    display: grid;
+    grid-gap: 12px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .footer .first-link {
+    padding: 0;
+  }
+  .footer {
+    text-align: center;
+    font-size: 10px;
+  }
+  .left-nav li a,
+  .right-nav li a {
+    font-size: 1.125rem;
+  }
+  .left-nav li,
+  .right-nav li {
+    margin-bottom: 20px;
+  }
+}
+.right-nav ul li span {
+  text-transform: uppercase;
+}
+@media (max-width: 500px) {
+  .logo {
+    width: 100px;
+  }
+}
+@media (max-width: 340px) {
+  .authenticheck-container input {
+    font-size: 16px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}

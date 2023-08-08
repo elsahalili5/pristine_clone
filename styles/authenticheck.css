@@ -1,0 +1,35 @@
+.authenticheck-container {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0;
+}
+.authenticheck-container p {
+  font-family: "AkzidenzGrotesk-Cond";
+}
+.authenticheck-container h2 {
+  text-align: center;
+  font-size: 15px;
+}
+.authenticheck-container input {
+  background: #000;
+  color: white;
+  text-align: center;
+  width: 100%;
+  border-radius: 10px;
+  padding: 25px;
+  font-size: 30px;
+  margin-top: 40px;
+}
+
+.authenticheck-container input::placeholder {
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .authenticheck-container input {
+    font-size: 20px;
+  }
+  .container p {
+    text-align: center;
+  }
+}

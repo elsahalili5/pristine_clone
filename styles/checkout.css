@@ -1,0 +1,224 @@
+.checkout-form {
+  margin: 10px;
+  margin-bottom: 60px;
+  font-family: "AkzidenzGrotesk-Cond";
+  display: inline-block;
+}
+
+.input {
+  width: 230px;
+  padding: 12px;
+  background: #fff;
+  outline: none;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  font-family: akzidenz-grotesk_bqextended;
+  margin-bottom: 18px;
+  margin-left: 5px;
+}
+.form-title {
+  font-weight: 200;
+  margin: 20px;
+  text-transform: uppercase;
+}
+
+.checkout-cart-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 42%;
+  background-color: black;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 20px;
+  font-family: "AkzidenzGrotesk-Cond";
+
+  overflow: auto;
+}
+
+.ordered-items {
+  font-weight: 600;
+
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 60px;
+  /* overflow: auto; */
+  margin-bottom: 10px;
+}
+.ordered-item {
+  color: black;
+  min-height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px 90px;
+
+  display: flex;
+  justify-content: flex-start;
+  padding: 25px;
+
+  position: relative;
+}
+.image-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ordered-item img {
+  max-width: 90%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.left-side {
+  font-size: 20px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-side {
+  font-family: "AkzidenzGrotesk-Cond";
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.product-name {
+  justify-content: flex-start;
+  display: flex;
+  text-transform: uppercase;
+}
+
+.ordered-item-size {
+  list-style: none;
+  border: 1px solid grey;
+  border-radius: 10px;
+  text-align: center;
+  width: 50px;
+  padding: 3px;
+  font-family: "AkzidenzGrotesk-Cond";
+}
+.ordered-item-price {
+  padding-top: 5px;
+}
+.ordered-item-quantity {
+  margin-left: 5px;
+}
+.total-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color: #000;
+  background-color: white;
+  margin: 10px 90px;
+  border-radius: 9px;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.subtotal {
+  font-size: 25px;
+}
+.payment-container {
+  margin: 10px 90px;
+  display: flex;
+  justify-content: space-between;
+}
+.payment-container div {
+  border-radius: 5px;
+  color: #000;
+  background-color: white;
+}
+
+.credit-card-checkbox img {
+  width: 250px;
+}
+
+.credit-card-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 10px;
+  border: 1px solid #ccc;
+}
+
+.paypal-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  padding: 6px;
+  margin-left: 13px;
+}
+.paypal-checkbox input {
+  margin-left: 6px;
+  border: 0.1em solid #000;
+  background-color: transparent;
+  color: black;
+}
+.paypal-checkbox img {
+  width: 70px;
+  padding: 5px;
+}
+.order-btn-container {
+  margin: 10px 90px;
+  display: grid;
+}
+.order-btn {
+  font-family: "AkzidenzGrotesk-Cond";
+
+  padding: 12px 0;
+  border-radius: 9px;
+  font-size: 22px;
+  border: 1px solid #000;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.5s cubic-bezier(0.3, 0, 0.2, 1);
+}
+
+.order-btn:hover {
+  border: 1px solid white;
+  color: white;
+  background-color: #000;
+}
+
+.total-container p {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.errors-container {
+  font-family: "AkzidenzGrotesk-Cond";
+  background-color: #000;
+  color: white;
+  font-size: 20px;
+  margin: 100px 0;
+}
+
+.errors-container ul li {
+  padding: 1px 50px;
+
+  list-style: none;
+}
+.errors-container li:first-child {
+  padding-top: 20px;
+}
+.errors-container li:last-child {
+  padding-bottom: 20px;
+}
+.input-error {
+  border: 1px solid red;
+}

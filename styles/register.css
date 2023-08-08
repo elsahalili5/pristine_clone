@@ -1,0 +1,68 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  margin: 70px 0;
+  text-align: center;
+}
+
+.register-form {
+  width: 500px;
+  height: 600px;
+  background-color: black;
+  font-family: "AkzidenzGrotesk-Cond";
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-direction: column;
+  padding: 100px 60px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.register-form-row {
+}
+
+.register-form-row input {
+  width: 80%;
+  padding: 15px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  outline: none;
+}
+.register-form button {
+  padding: 18px;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 12px;
+}
+.register-form button:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+#result {
+  visibility: hidden;
+}
+#result-p {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 50px;
+  font-family: "AkzidenzGrotesk-Cond";
+  font-size: 25px;
+}
+.show {
+  visibility: visible;
+}
+@media (max-width: 550px) {
+  .container {
+    padding: 0 8px;
+  }
+  .register-form {
+    height: 500px;
+    padding: 70px 0px;
+  }
+}
