@@ -35,7 +35,9 @@
               <li class="hidden" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
               <li href="myaccount.html" class="hidden" id="myaccount"><span>MY ACCOUNT</span></li>
               <li id="login-btn"><a href="login.html">LOGIN</a></li>
-              <li><span id="cart">CART</span> <span class="cart-quantity" id="cart-quantity">0</span></li>
+              <li id="cart"><ion-icon name="cart-outline"></ion-icon></i><span class="cart-quantity" id="cart-quantity">0</span></li>
+
+              <!-- <li ><span id="cart">CART</span> <span class="cart-quantity" id="cart-quantity">0</span></li> -->
             </ul>
           </div>
           <div class="menu-icon" id="menu-toggle">
@@ -52,7 +54,7 @@
 
     <main>
       <div class="container">
-        <div class="checkout-form">
+        <div class="checkout-form" id="checkout-form">
      <div class="errors-container"  >
     <ul id="errors">
     </ul>
@@ -334,6 +336,8 @@
           <div class="ordered-items" id="ordered-items">
            
           </div>
+          <div id="checkout-cart-footer">
+
           <div class="total-container">
             <p>TOTAL: <span>€<span id="subtotal"></span></p></span>
           </div>
@@ -345,9 +349,22 @@
               <button class="order-btn" id="order-btn">PLACE ORDER</button>
 
           </div>
+                      
+        </div>
         </div>
       </div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p id="thank-you-message"></p>
+          <p id="modal-message"></p>
+          <a href="myaccount.html" id="modal-link">Click here to view orders</a>
+        </div>
+      </div>
+      
+      
     </main>
+    
 
     <!-- Cart sidebar -->
     <div class="cart-container" id="cart-container">
@@ -360,7 +377,8 @@
         <div class="cart-item" id="cart-item"></div>
       </div>
 
-      <div class="cart-checkout-wrapper">
+      <div class="cart-checkout-wrapper" id="cart-checkout-wrapper">
+     
         <!-- <div> -->
         <p class="cart-total">TOTAL: $<span id="cart-total-value"></span></p>
         <!-- </div> -->

@@ -11,7 +11,7 @@
   justify-content: space-between;
 }
 .myaccount {
-  color: #000;
+  color: #050505;
   padding: 24px;
   font-size: 21px;
   font-weight: 500;
@@ -24,14 +24,14 @@
   position: relative;
   padding: 30px 24px;
   border-radius: 10px;
-  background: black;
+  background: #050505;
   color: white;
 }
 .information-box h2 {
   font-weight: 100;
 }
 .orders-container {
-  background: #000;
+  background: #050505;
   color: #fff;
   width: 70%;
   margin-top: 70px;
@@ -44,7 +44,7 @@
 
 .logout-btn {
   border-radius: 10px;
-  background: #000;
+  background: #050505;
   color: #fff;
   padding: 15px 20px;
   font-size: 10px;
@@ -75,7 +75,7 @@
 
 .orders-container a:hover {
   background-color: white;
-  color: black;
+  color: #050505;
   font-weight: 700;
   border-radius: 3px;
 }
@@ -133,6 +133,6 @@ td:first-child {
 
 .view-btn:hover {
   border: 1px solid white;
-  background-color: black;
+  background-color: #050505;
   color: white;
 }

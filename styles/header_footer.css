@@ -215,3 +215,7 @@ main {
 .visible {
   display: block;
 }
+
+#cart ion-icon {
+  font-size: 19px;
+}

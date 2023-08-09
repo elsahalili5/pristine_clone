@@ -3,19 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/header_footer.css" />
+    <title>Order Purchase Successful</title>
     <link rel="icon" href="./images/favicon.png" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/header_footer.css" />
+    <link rel="stylesheet" href="./styles/order.css" />
     <link rel="stylesheet" href="./styles/cart.css" />
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-    <link
-      rel="stylesheet"
-      href="./styles/login.css
-    "
-    />
-    <title>My account - Pristine Original</title>
   </head>
   <body>
     <header>
@@ -28,7 +23,6 @@
               <li><a href="authenticheck.html">AUTHENTICHECK</a></li>
               <li><a href="purpose.html">THE PURPOSE</a></li>
               <li><a href="login.html"></a></li>
-              <li><a href=""></a></li>
             </ul>
           </div>
           <div class="logo">
@@ -40,8 +34,9 @@
               <li class="hidden" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
               <li href="myaccount.html" class="hidden" id="myaccount"><span>MY ACCOUNT</span></li>
               <li id="login-btn"><a href="login.html">LOGIN</a></li>
-              <!-- <li><span id="cart">CART</span> <span class="cart-quantity" id="cart-quantity">0</span></li> -->
               <li id="cart"><ion-icon name="cart-outline"></ion-icon></i><span class="cart-quantity" id="cart-quantity">0</span></li>
+
+              <!-- <li><span id="cart">CART</span> <span class="cart-quantity" id="cart-quantity">0</span></li> -->
 
               <!-- <li class="hidden" id="logout-btn"><span>LOGOUT</span></li> -->
             </ul>
@@ -55,45 +50,18 @@
         </nav>
       </div>
     </header>
-    <!-- END HEADER HERE  -->
+    <!-- END HEADER HERE -->
     <main>
-      <div class="container">
-        <div class="login-form">
-          <div class="new-member-container">
-            <div class="newmember-text">
-              <h1>NEW MEMBER</h1>
-
-              <p>
-                By creating an account with our store, you will be able to move through the checkout process faster,
-                store multiple shipping addresses, view track your orders in your account and more
-              </p>
-            </div>
-
-            <div class="btn">
-              <a class="btn-black" href="register.html">CREATE NEW ACCOUNT</a>
-              <!-- <button class="btn-black">CREATE NEW ACCOUNT</button> -->
-            </div>
-          </div>
-          <form onsubmit="return loginUser()">
-            <div class="sign-in-form">
-              <h1>SIGN IN</h1>
-              <div class="wrapper">
-                <div class="sign-in-form-row">
-                  <input type="text" id="email" placeholder="Email " />
-                </div>
-                <div class="sign-in-form-row">
-                  <input type="password" id="pwd" placeholder="Password" />
-                </div>
-              </div>
-              <div class="sign-in-form-bottom">
-                <button type="submit" class="btn-black sign-in-btn">SIGN IN</button>
-                <a href="">FORGOT YOUR PASSWORD</a>
-              </div>
-            </div>
-          </form>
+        <div class="container">
+        <div class="confirmation-message">
+          <p>Thank you for your order !</p>
+          <p>Your order has been successfully placed.</p>
+          <a class="order-link" href="myaccount.html">Click here to view your order details.</a>
         </div>
-      </div>
-    </main>
+    </div>
+      </main>
+
+    <!-- Cart sidebar -->
     <div class="cart-container" id="cart-container">
       <div class="cart-header">
         <h3>CART ITEMS</h3>
@@ -103,8 +71,8 @@
       <div class="cart-items" id="cart-items">
         <div class="cart-item" id="cart-item"></div>
       </div>
-      <div class="cart-checkout-wrapper" id="cart-checkout-wrapper">
 
+      <div class="cart-checkout-wrapper" id="cart-checkout-wrapper">
         <!-- <div> -->
         <p class="cart-total">TOTAL: $<span id="cart-total-value"></span></p>
         <!-- </div> -->
@@ -112,6 +80,8 @@
         <button class="checkout-btn" id="checkout-btn">CHECK OUT</button>
       </div>
     </div>
+    <!-- end of cart sidebar -->
+
     <!-- BEGIN FOOTER -->
     <footer>
       <div class="container">
@@ -122,7 +92,6 @@
 
           <div class="footer-right">
             <a class="first-link" href="">SITE POLICY</a>
-
             <a href="">TERMS OF USE</a>
             <a href="customercare.html">CUSTOMER CARE</a>
           </div>
@@ -132,7 +101,6 @@
         </div>
       </div>
     </footer>
-    <script src="./js/login.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/shopping-cart.js"></script>
   </body>

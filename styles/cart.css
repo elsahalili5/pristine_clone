@@ -43,6 +43,7 @@
 }
 
 .checkout-btn {
+  font-weight: 600;
   padding: 10px 15px;
   background-color: black;
   border: 1px solid white;
@@ -55,11 +56,16 @@
   justify-content: space-between;
 }
 .checkout-btn:hover {
-  background-color: gray;
-  border: 1px solid rgb(150, 149, 149);
+  background-color: white;
+  border: 1px solid black;
   color: black;
 }
-
+.checkout-btn:disabled {
+  background-color: gray;
+  border: 1px solid rgb(8, 8, 8);
+  color: black;
+  cursor: not-allowed;
+}
 .cart-total {
   background-color: white;
   padding: 5px 10px;
@@ -142,4 +148,8 @@
 }
 .cart-quantity {
   font-weight: 500;
+}
+.empty-cart-message {
+  font-size: 20px;
+  margin-top: 200px;
 }

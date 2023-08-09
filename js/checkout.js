@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const formattedDate = `${currentDate.getFullYear()}-${
           currentDate.getMonth() + 1
         }-${currentDate.getDate()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+
         const newOrder = {
           user: loggedInUserData,
           billingDetails: billingDetails,
@@ -110,12 +111,9 @@ document.addEventListener("DOMContentLoaded", function () {
         };
         orderedItems.push(newOrder);
         localStorage.setItem("orderedItems", JSON.stringify(orderedItems));
-      }
-      placeOrderButton.addEventListener("click", () => {
         localStorage.removeItem("cartItems");
-        orderedItemsContainer.innerHTML = "";
-        subtotalSpan.innerHTML = "0.00";
-      });
+        window.location.href = "order-confirmation.html";
+      }
     });
   });
 });

@@ -45,6 +45,24 @@ function loadProductDetails(id) {
     productSizes.innerHTML = sizesHTML;
   }
 }
+function showModal(message, modalId, modalMessageClass) {
+  const modal = document.getElementById(modalId);
+  const modalMessage = modal.querySelector("." + modalMessageClass);
+  const closeModal = modal.querySelector(".custom-close");
+
+  modalMessage.textContent = message;
+  modal.style.display = "block";
+
+  closeModal.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+}
 
 function addCartBtnEventListener(product) {
   const addToCartBtn = document.getElementById("add-item-btn");
@@ -52,14 +70,13 @@ function addCartBtnEventListener(product) {
   if (addToCartBtn) {
     addToCartBtn.addEventListener("click", function () {
       if (!selectedSize) {
-        alert("Please select a size!");
+        showModal("Please select a size before adding this product to cart!", "sizeModal", "modal-message");
       } else {
         addProductToShoppingCart(product, selectedSize);
       }
     });
   }
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   const productDetailsId = localStorage.getItem("product-details");
 

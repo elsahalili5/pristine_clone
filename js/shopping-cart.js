@@ -2,13 +2,11 @@ var cartBtn = document.getElementById("cart");
 var cartContainer = document.getElementById("cart-container");
 var closeBtn = document.getElementById("x-icon");
 const cartQuantity = document.getElementById("cart-quantity");
-
 if (cartBtn) {
   cartBtn.onclick = () => {
     openShoppingCart();
   };
 }
-
 if (closeBtn) {
   closeBtn.onclick = () => {
     cartContainer.classList.remove("cart-show");
@@ -21,6 +19,7 @@ function setCartItemsToLocalStorage(cartItems) {
 
 function addProductToShoppingCart(product, selectedSize) {
   const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
   const existingCartItem = cartItems.find((item) => item.id === product.id);
 
   if (existingCartItem && existingCartItem.selectedSize === selectedSize) {
@@ -61,20 +60,28 @@ function renderCartItems() {
   const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
   const cartItemsContainer = document.getElementById("cart-items");
   const cartTotalValue = document.getElementById("cart-total-value");
+  const cartCheckoutWrapper = document.getElementById("cart-checkout-wrapper");
 
   updateCartMenuItemQuantity();
 
   if (cartItemsContainer) {
     cartItemsContainer.innerHTML = "";
     let totalPrice = 0;
+    if (cartItems.length === 0) {
+      const emptyCartMessage = document.createElement("div");
+      emptyCartMessage.classList.add("empty-cart-message");
+      emptyCartMessage.innerHTML = "<p>You have no items in your shopping cart.</p>";
+      cartItemsContainer.appendChild(emptyCartMessage);
+      cartCheckoutWrapper.style.display = "none";
+    } else {
+      cartCheckoutWrapper.style.display = "flex";
+      cartItems.forEach((cartItem, index) => {
+        totalPrice += cartItem.price * cartItem.quantity;
 
-    cartItems.forEach((cartItem, index) => {
-      totalPrice += cartItem.price * cartItem.quantity;
+        const itemElement = document.createElement("div");
+        itemElement.classList.add("cart-item");
 
-      const itemElement = document.createElement("div");
-      itemElement.classList.add("cart-item");
-
-      itemElement.innerHTML = `
+        itemElement.innerHTML = `
      <ion-icon class="x-btn" id="x-btn-${cartItem.id}" name="close-outline"></ion-icon>
 
       <div class="image-box">
@@ -92,37 +99,38 @@ function renderCartItems() {
         <p id="price-${cartItem.id}">PRICE: €${cartItem.price.toFixed(2)}</p> 
       </div>
     `;
-      cartItemsContainer.appendChild(itemElement);
+        cartItemsContainer.appendChild(itemElement);
 
-      const removeProductBtn = document.getElementById(`x-btn-${cartItem.id}`);
-      if (removeProductBtn) {
-        removeProductBtn.addEventListener("click", function () {
-          cartItems.splice(index, 1);
-          setCartItemsToLocalStorage(cartItems);
-          renderCartItems();
-        });
-      }
-
-      const increaseBtn = document.getElementById(`increase-btn-${cartItem.id}`);
-      if (increaseBtn) {
-        increaseBtn.addEventListener("click", function () {
-          cartItem.quantity += 1;
-          setCartItemsToLocalStorage(cartItems);
-          renderCartItems();
-        });
-      }
-
-      const decreaseBtn = document.getElementById(`decrease-btn-${cartItem.id}`);
-      if (decreaseBtn) {
-        decreaseBtn.addEventListener("click", function () {
-          if (cartItem.quantity > 1) {
-            cartItem.quantity -= 1;
+        const removeProductBtn = document.getElementById(`x-btn-${cartItem.id}`);
+        if (removeProductBtn) {
+          removeProductBtn.addEventListener("click", function () {
+            cartItems.splice(index, 1);
             setCartItemsToLocalStorage(cartItems);
             renderCartItems();
-          }
-        });
-      }
-    });
+          });
+        }
+
+        const increaseBtn = document.getElementById(`increase-btn-${cartItem.id}`);
+        if (increaseBtn) {
+          increaseBtn.addEventListener("click", function () {
+            cartItem.quantity += 1;
+            setCartItemsToLocalStorage(cartItems);
+            renderCartItems();
+          });
+        }
+
+        const decreaseBtn = document.getElementById(`decrease-btn-${cartItem.id}`);
+        if (decreaseBtn) {
+          decreaseBtn.addEventListener("click", function () {
+            if (cartItem.quantity > 1) {
+              cartItem.quantity -= 1;
+              setCartItemsToLocalStorage(cartItems);
+              renderCartItems();
+            }
+          });
+        }
+      });
+    }
 
     if (cartTotalValue) {
       cartTotalValue.innerHTML = totalPrice.toFixed(2);
