@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/header_footer.css" />
     <link rel="icon" href="./images/favicon.png" />
     <link rel="stylesheet" href="./styles/cart.css" />
+    <link rel="stylesheet" href="./styles/chabot.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -297,11 +298,31 @@
     <!-- ChatBot -->
     <div class="chat_icon" id="chat_icon">
       <ion-icon name="chatbox-ellipses" style="color: rgb(28, 28, 28)"></ion-icon>
-      <!-- <ion-icon name="chatbox-ellipses-outline" style="color: black"></ion-icon> -->
-      <!-- <i class="fa-thin fa-comments-question-check" style="color: #00040a"></i> -->
     </div>
     <div class="chat_box" id="chat_box">
       <ion-icon class="remove-icon" id="remove-icon" name="close-outline"></ion-icon>
+
+      <button class="chatbot-toggler">
+        <span class="material-symbols-rounded">mode_comment</span>
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div class="chatbot">
+        <header>
+          <h2>Chatbot</h2>
+          <span class="close-btn material-symbols-outlined">close</span>
+        </header>
+        <ul class="chatbox">
+          <li class="chat incoming">
+            <span class="material-symbols-outlined">smart_toy</span>
+            <p>Hi there 👋<br>How can I help you today?</p>
+          </li>
+        </ul>
+        <div class="chat-input">
+          <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+          <span id="send-btn" class="material-symbols-rounded">send</span>
+        </div>
+      </div>
+
     </div>
     <!-- BEGIN FOOTER -->
     <footer>
@@ -326,5 +347,6 @@
     <script src="./js/main.js"></script>
     <script src="./js/shop.js"></script>
     <script src="./js/shopping-cart.js"></script>
+    <script src="./js/chatbot.js"></script>
   </body>
 </html>

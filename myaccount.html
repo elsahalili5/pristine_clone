@@ -54,62 +54,95 @@
       <!-- BEGIN MAIN -->
       <main>
         <div class="container">
-            <div class="profile-info">
-                <div class="account-information">
-                    <h2 class="myaccount">MY ACCOUNT</h2>
-                    <div class="information-box">
-                      <h2 id="user-name"></h2>
-                         <h2 id="user-email"></h2>
-                    </div>
-              <button class="hidden logout-btn" id="logout-btn"><span >LOGOUT</span></button>
+          <div class="profile-info">
+            <div class="account-information">
+              <h2 class="myaccount">MY ACCOUNT</h2>
+              <div class="information-box">
+                <h2 id="user-name"></h2>
+                <h2 id="user-email"></h2>
+              </div>
+              <button class="hidden logout-btn" id="logout-btn"><span>LOGOUT</span></button>
+            </div>
+      
+            <div class="orders-container">
+              <div id="orders-container">
+                <p>ALL ORDERS</p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Products</th>
+                      <th>Date</th>
+                      <th>Total</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody id="order-history"></tbody>
+                </table>
+              </div>
+              <a href="shop.html">Browse Products</a>
+            </div>
+      
+            <div class="custom-modal" id="customOrderModal">
+              <div class="modal-inner">
+                <span class="modal-close" id="closeCustomModal">&times;</span>
+                <h2>Order Details</h2>
+
+                <div class="order-details-container">
+
+                <ul class="order-details" >
+                  <li>
+                    <span class="label">Name:</span> 
+                    <span id="usernameSpan"></span>
+                  </li>
+                  <li>
+                    <span class="label">Email:</span> 
+                    <span id="emailSpan"></span>
+                  </li>
+                  <li>
+                    <span class="label">Phone:</span> 
+                    <span id="phoneSpan"></span>
+                  </li>
+                  <li>
+                    <span class="label">Date:</span> 
+                    <span id="dateSpan"></span>
+                  </li>
+              
+                </ul>
+              <ul class="order-details">
+                <li>
+                  <span class="label">Country:</span> 
+                  <span id="countrySpan"></span>
+                </li>
+                  <li>
+                    <span class="label">City:</span> 
+                    <span id="citySpan"></span>
+                  </li>
+                  <li>
+                    <span class="label">Address:</span> 
+                    <span id="addressSpan"></span>
+                  </li>
+                
+                  <li>
+                    <span class="label">Payment Method </span> 
+                    <span id="paymentMethodSpan"></span>
+                  </li>
+                </ul>
+              </div>
+
+                <div  class="modal-details" id="modal-details">
+                  <h2>Order Items</h2>
+                  <div class="order-items" id="order-items">
+                   
                   </div>
-                      <div   class="orders-container">
-                        <div id="orders-container">
-                        <p>ALL ORDERS</p>
-                        <table >
-                          <thead>
-                            <tr>
-                              <th></th>
-                              <th>Products</th>
-                              <th>Date</th>
-                              <th>Total</th>
-                              <th></th>
-                            </tr>
-                          </thead>
-                          <tbody id="order-history">
-                            <!-- <tr>
-                              <td>1</td>
-                              <td><img src="./images/product4-hover.jpg"  width="100px"alt="">
-                              </td>
-                              <td>2023-08-07</td>
-                              <td>€100.00</td>
-                              <td><button class="view-btn">VIEW</button></td>
-                            </tr>    
-                             <tr>
-                              <td>1</td>
-                              <td><img src="./images/product4-hover.jpg"  width="100px"alt="">
-                              </td>
-                              <td>2023-08-07</td>
-                              <td>€100.00</td> -->
-                            <!-- <tr><button class="view-btn">VIEW</button></tr> -->
-
-                            <!-- </tr>           -->
-
-                          </tbody>
-                        </table>
-                      </div>
-                        
-                          <!-- <p id="order-history">No order has been made yet.</p> -->
-                          <a href="shop.html">Browse Products</a>
-                      </div>
-
-                      <div class="order-details">
-
-                      </div>
+                </div>
+                <h2>Total: <span>€<span id="order-total"></span></span></h2>
+              </div>
             </div>
           </div>
+        </div>  
       </main>
-  
+    
       <!-- Cart sidebar -->
       <div class="cart-container" id="cart-container">
         <div class="cart-header">

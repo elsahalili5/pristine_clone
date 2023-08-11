@@ -6,6 +6,19 @@ const loggedInUserData = JSON.parse(localStorage.getItem("loggedInUser"));
 const checkoutInputs = document.querySelectorAll(".checkout-form input, .checkout-form select");
 const errorsElement = document.getElementById("errors");
 
+function populateCountriesSelect() {
+  const billingCountryElement = document.getElementById("billing-country");
+
+  if (countries && billingCountryElement) {
+    countries.forEach((country) => {
+      const option = document.createElement("option");
+      option.value = country.value;
+      option.textContent = country.label;
+      billingCountryElement.appendChild(option);
+    });
+  }
+}
+
 function updateCheckoutSection() {
   orderedItemsContainer.innerHTML = "";
   let orderedTotalPrice = 0;
@@ -42,6 +55,8 @@ function updateCheckoutSection() {
 updateCheckoutSection(cartItems);
 
 document.addEventListener("DOMContentLoaded", function () {
+  populateCountriesSelect();
+
   orderBtn.addEventListener("click", function () {
     let billingDetails = {};
     let hasError = false;
@@ -56,7 +71,14 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         errorsElement.innerHTML = "";
         checkoutInputs.forEach((input) => {
-          billingDetails[input.name.replace("billing-", "")] = input.value;
+          if (input.id === "billing-country") {
+            const foundCountry = countries.find((country) => country.value === input.value);
+            if (foundCountry) {
+              billingDetails[input.name.replace("billing-", "")] = foundCountry.label;
+            }
+          } else {
+            billingDetails[input.name.replace("billing-", "")] = input.value;
+          }
 
           if (input.value === "") {
             hasError = true;
@@ -89,11 +111,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         creditCardCheckbox.addEventListener("change", function () {
-          paypalCheckbox.checked = false;
+          if (creditCardCheckbox.checked) {
+            paypalCheckbox.checked = false;
+          }
         });
 
         paypalCheckbox.addEventListener("change", function () {
-          creditCardCheckbox.checked = false;
+          if (paypalCheckbox.checked) {
+            creditCardCheckbox.checked = false;
+          }
         });
 
         const currentDate = new Date();
@@ -103,6 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const newOrder = {
           user: loggedInUserData,
+          id: generateOrderId(),
           billingDetails: billingDetails,
           orderItems: cartItems,
           paymentMethod: selectedPaymentMethod,
@@ -117,3 +144,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+function generateOrderId() {
+  return Math.floor(Math.random() * 100000);
+}
+
+console.log(generateOrderId());

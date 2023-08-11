@@ -94,7 +94,7 @@ function renderCartItems() {
       </div>
       <div class="left">
         <p>${cartItem.name}</p>
-        <p id="size-${cartItem.id}">SELECT SIZE: ${cartItem.selectedSize}</p> 
+        <p id="size-${cartItem.id}">SELECTED SIZE: ${cartItem.selectedSize}</p> 
 
         <p id="price-${cartItem.id}">PRICE: €${cartItem.price.toFixed(2)}</p> 
       </div>

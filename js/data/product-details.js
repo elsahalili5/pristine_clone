@@ -26,7 +26,6 @@ function loadProductDetails(id) {
     });
     itemPicsContainer.innerHTML = itemPicsHTML;
 
-    // add dynamic product details
     let detailsHTML = "";
     foundProduct.details.forEach((detail, index) => {
       detailsHTML += `<li>${detail}</li>`;
@@ -96,7 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
       selectedSize = item.innerText;
       selectedSizeParagraph.textContent = `: ${selectedSize}`;
 
-      // Add event listener for clear button
       clearBtn.addEventListener("click", () => {
         sizeListItems.forEach((item) => item.classList.remove("selected"));
         clearBtn.classList.add("hidden");

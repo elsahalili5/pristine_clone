@@ -1,5 +1,6 @@
 @font-face {
   src: url("AkzidenzGrotesk-Cond.otf");
+
   font-family: "AkzidenzGrotesk-Cond";
 }
 
@@ -173,7 +174,10 @@
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 40%;
+  width: 30%;
+  font-size: 20px;
+  padding-bottom: 40px;
+  font-family: "AkzidenzGrotesk-Cond";
 }
 
 .custom-close {
@@ -190,5 +194,7 @@
   cursor: pointer;
 }
 
-.disabled {
+.modal_header {
+  display: flex;
+  flex-direction: row-reverse;
 }

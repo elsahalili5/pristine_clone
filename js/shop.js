@@ -32,14 +32,3 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   });
 });
-
-var chatIcon = document.getElementById("chat_icon");
-var chatBox = document.getElementById("chat_box");
-var removeIcon = document.getElementById("remove-icon");
-
-chatIcon.onclick = () => {
-  chatBox.classList.add("active");
-};
-removeIcon.onclick = () => {
-  chatBox.classList.remove("active");
-};
