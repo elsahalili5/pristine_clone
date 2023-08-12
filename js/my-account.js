@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const viewOrderBtns = document.querySelectorAll(".view-btn");
       const customModal = document.getElementById("customOrderModal");
-      const orderImage = document.getElementById("orderImage");
       const closeCustomModal = document.getElementById("closeCustomModal");
       const orderName = document.getElementById("usernameSpan");
       const orderCountry = document.getElementById("countrySpan");
@@ -39,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const orderPaymentMethod = document.getElementById("paymentMethodSpan");
       const orderItemsElement = document.getElementById("order-items");
       const orderItem = document.getElementById("order-item");
-      const modalDetails = document.getElementById("modal-details");
 
       viewOrderBtns.forEach((viewOrderBtn) => {
         viewOrderBtn.addEventListener("click", function () {
@@ -61,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
             order.orderItems.forEach((orderItem) => {
               orderItemsElement.innerHTML += `
                     <div class="order-item">
-                      <img id="orderImage" src="./images/${orderItem.image}" width="100px">
+                      <img  src="./images/${orderItem.image}" >
                       <p>${orderItem.name}</p>
                       <p>Size: ${orderItem.selectedSize}</p>
                       <p>Quantity: ${orderItem.quantity}</p>

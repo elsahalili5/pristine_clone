@@ -14,9 +14,8 @@ function registerUser() {
     email: email,
     password: pass,
   });
-
-  localStorage.setItem("users", JSON.stringify(users));
 }
+
 function submitRegisterForm() {
   if (document.Formfill.FirstName.value === "") {
     document.getElementById("result-p").innerHTML = "Enter First Name*";
@@ -28,10 +27,13 @@ function submitRegisterForm() {
     document.getElementById("result").style.visibility = "visible";
 
     return false;
+  } else if (users.find((user) => user.email === email)) {
+    document.getElementById("result-p").innerHTML = "Email is already in use.";
+    document.getElementById("result").style.visibility = "visible";
+    return false;
   } else if (document.Formfill.Password.value === "") {
     document.getElementById("result-p").innerHTML = "Enter your Password*";
     document.getElementById("result").style.visibility = "visible";
-
     return false;
   } else if (document.Formfill.Password.value.length < 6) {
     document.getElementById("result-p").innerHTML = " Password must be at least 6-digits*";
@@ -42,8 +44,9 @@ function submitRegisterForm() {
     document.getElementById("result-p").innerHTML = "";
     document.getElementById("result").style.visibility = "hidden";
     registerUser();
-    alert("User registered successfully");
     return true;
   }
 }
-console.log("username:", userName);
+
+// } else if (users.some((user) => user.email === email)) {
+//

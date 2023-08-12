@@ -20,7 +20,7 @@
 .information-box {
   text-transform: uppercase;
   width: 300px;
-  min-height: 300px;
+  min-height: 200px;
   position: relative;
   padding: 30px 24px;
   border-radius: 10px;
@@ -185,25 +185,6 @@ td:first-child {
   object-fit: cover;
   object-position: center;
 }
-@media only screen and (max-width: 500px) {
-  .profile-info {
-    flex-direction: column;
-  }
-
-  .orders-container {
-    padding: 10px 20px;
-    width: 100%;
-    margin-top: 20px;
-  }
-  table {
-    font-size: 15px;
-    margin-bottom: 0;
-  }
-  .view-btn {
-    font-size: 10px;
-    padding: 5px;
-  }
-}
 
 .order-details li {
   list-style: none;
@@ -223,4 +204,42 @@ td:first-child {
   display: flex;
   justify-content: space-between;
   width: 500px;
+}
+.order-items {
+  overflow: auto;
+  max-height: 300px;
+}
+.order-item img {
+  height: 110px;
+  width: 100px;
+}
+
+@media only screen and (max-width: 800px) {
+  .profile-info {
+    flex-direction: column;
+  }
+  .information-box {
+    width: 100%;
+  }
+  .orders-container {
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  table {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  .view-btn {
+    font-size: 10px;
+    padding: 5px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .orders-container {
+    width: 60%;
+  }
+  table {
+    margin-bottom: 0;
+  }
 }

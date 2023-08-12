@@ -18,6 +18,13 @@ function populateCountriesSelect() {
     });
   }
 }
+function fillForm() {
+  if (loggedInUserData) {
+    document.getElementById("billing-email").value = loggedInUserData.email;
+    document.getElementById("billing-first-name").value = loggedInUserData.username;
+    document.getElementById("billing-last-name").value = loggedInUserData.lastname;
+  }
+}
 
 function updateCheckoutSection() {
   orderedItemsContainer.innerHTML = "";
@@ -56,6 +63,7 @@ updateCheckoutSection(cartItems);
 
 document.addEventListener("DOMContentLoaded", function () {
   populateCountriesSelect();
+  fillForm();
 
   orderBtn.addEventListener("click", function () {
     let billingDetails = {};
