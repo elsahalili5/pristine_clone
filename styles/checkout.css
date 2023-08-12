@@ -75,7 +75,7 @@
 }
 
 .ordered-item img {
-  max-width: 90%;
+  max-width: 80%;
   height: 150px;
   object-fit: cover;
   object-position: center;
@@ -144,14 +144,15 @@
 }
 
 .credit-card-checkbox img {
-  width: 250px;
+  width: 70%;
+  object-fit: contain;
 }
 
 .credit-card-checkbox {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 3px 10px;
+  justify-content: space-around;
+  /* padding: 3px 10px; */
   border: 1px solid #ccc;
 }
 
