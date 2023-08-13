@@ -3,10 +3,18 @@ const email_regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z
 
 function registerUser() {
   var email = document.getElementById("email").value;
+
+  console.log(email);
   var pass = document.getElementById("pwd").value;
   var userName = document.getElementById("username").value;
   var lastName = document.getElementById("lName").value;
   const users = JSON.parse(localStorage.getItem("users")) || [];
+
+  if (users.find((user) => user.email === email)) {
+    document.getElementById("result-p").innerHTML = "Email is already in use.";
+    document.getElementById("result").style.visibility = "visible";
+    return false;
+  }
 
   users.push({
     username: userName,
@@ -17,6 +25,9 @@ function registerUser() {
 }
 
 function submitRegisterForm() {
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  var email = document.getElementById("email").value;
+  console.log(email);
   if (document.Formfill.FirstName.value === "") {
     document.getElementById("result-p").innerHTML = "Enter First Name*";
     document.getElementById("result").style.visibility = "visible";
@@ -27,7 +38,7 @@ function submitRegisterForm() {
     document.getElementById("result").style.visibility = "visible";
 
     return false;
-  } else if (users.find((user) => user.email === email)) {
+  } else if (users.find((user) => user.email == email)) {
     document.getElementById("result-p").innerHTML = "Email is already in use.";
     document.getElementById("result").style.visibility = "visible";
     return false;
@@ -47,6 +58,3 @@ function submitRegisterForm() {
     return true;
   }
 }
-
-// } else if (users.some((user) => user.email === email)) {
-//
