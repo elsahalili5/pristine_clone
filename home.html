@@ -14,6 +14,8 @@
   </head>
   <body>
     <header>
+
+
       <div class="container">
         <nav class="navbar">
           <div class="left-nav" id="menu-item">
@@ -22,7 +24,10 @@
               <li><a href="shop.html">SHOP</a></li>
               <li><a href="authenticheck.html">AUTHENTICHECK</a></li>
               <li><a href="purpose.html">THE PURPOSE</a></li>
-              <li><a href="login.html"></a></li>
+              <li  class="login-btn mobile-btn"><a href="login.html">LOGIN</a></li>
+              <li class=" hidden myaccount-btn mobile-btn" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
+
+              <li class="open-cart-btn cart-btn-mobile"><ion-icon name="cart-outline"></ion-icon></i><span class="cart-quantity" >0</span></li>
             </ul>
           </div>
           <div class="logo">
@@ -31,14 +36,16 @@
           </div>
           <div class="right-nav" id="menu-item-right">
             <ul>
-              <li class="hidden" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
+              <li class="hidden myaccount-btn" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
               <li href="myaccount.html" class="hidden" id="myaccount"><span>MY ACCOUNT</span></li>
-              <li id="login-btn"><a href="login.html">LOGIN</a></li>
-              <li id="cart"><ion-icon name="cart-outline"></ion-icon></i><span class="cart-quantity" id="cart-quantity">0</span></li>
-
-              <!-- <li><span id="cart">CART</span> <span class="cart-quantity" id="cart-quantity">0</span></li> -->
+              <li  class="login-btn"><a href="login.html">LOGIN</a></li>
+              <li class="open-cart-btn"><ion-icon name="cart-outline"></ion-icon></i><span class="cart-quantity" >0</span></li>
             </ul>
           </div>
+
+
+
+          
           <div class="menu-icon" id="menu-toggle">
             <img src="./images/menu.png" alt="" />
           </div>
