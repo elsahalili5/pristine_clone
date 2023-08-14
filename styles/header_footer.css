@@ -90,6 +90,13 @@ main {
 .menu-icon-x {
   display: none;
 }
+
+.mobile-btn {
+  display: none;
+}
+.cart-btn-mobile {
+  display: none;
+}
 @media (max-width: 1000px) {
   .logo {
     margin-right: 15px;
@@ -97,6 +104,16 @@ main {
   }
 }
 @media (max-width: 870px) {
+  .mobile-btn {
+    display: block;
+  }
+
+  .cart-btn-mobile {
+    display: block;
+  }
+  .cart-btn-mobile {
+    font-size: 20px;
+  }
   /* .navbar {
     flex-direction: column;
   }
@@ -126,12 +143,12 @@ main {
     display: block;
     z-index: 9999;
   }
-  .active ul li:nth-child(5) a::after {
+  /* .active ul li:nth-child(5) a::after {
     content: "LOGIN";
   }
   .active ul li:nth-child(6) a::after {
     content: "CART";
-  }
+  } */
   .active {
     display: block;
   }

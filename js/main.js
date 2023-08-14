@@ -2,10 +2,10 @@ let menuList = document.getElementById("menu-item");
 const menuToggle = document.getElementById("menu-toggle");
 const menuX = document.getElementById("menu-x");
 
-function unToggleClass() {
+function closeMenu() {
   menuList.classList.replace("active", "nonactive");
   menuX.classList.replace("show-x", "nonactive");
-  menuToggle.classList.toggle("show", "nonactive");
+  menuToggle.classList.replace("show", "nonactive");
 }
 
 menuToggle.addEventListener("click", function () {
@@ -13,27 +13,29 @@ menuToggle.addEventListener("click", function () {
   menuToggle.classList.toggle("show");
   menuList.classList.toggle("active");
 });
-menuX.addEventListener("click", function () {
-  menuList.classList.replace("active", "nonactive");
-  menuX.classList.replace("show-x", "nonactive");
-  menuToggle.classList.replace("show", "nonactive");
-});
+
+menuX.addEventListener("click", closeMenu);
 
 document.addEventListener("DOMContentLoaded", function () {
   const loggedInUserData = JSON.parse(localStorage.getItem("loggedInUser"));
 
-  const myAccount = document.getElementById("myaccount");
+  const myAccountBtns = document.querySelectorAll(".myaccount-btn");
   const logOutBtn = document.getElementById("logout-btn");
-  const logInBtn = document.getElementById("login-btn");
+  const logInBtns = document.querySelectorAll(".login-btn");
   const username = document.getElementById("user-name");
-  const lastname = document.getElementById("user-lastname");
   const userEmail = document.getElementById("user-email");
 
   if (!loggedInUserData) {
     return;
   }
 
-  myAccount.classList.remove("hidden");
+  myAccountBtns.forEach((btn) => {
+    btn.classList.remove("hidden");
+  });
+
+  logInBtns.forEach((btn) => {
+    btn.classList.add("hidden");
+  });
 
   if (logOutBtn) {
     logOutBtn.classList.remove("hidden");
@@ -50,6 +52,4 @@ document.addEventListener("DOMContentLoaded", function () {
   if (userEmail) {
     userEmail.textContent = loggedInUserData.email;
   }
-
-  logInBtn.classList.add("hidden");
 });

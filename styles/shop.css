@@ -83,7 +83,6 @@
   width: 400px;
   height: 75vh;
   background-color: rgb(28, 28, 28);
-  /* background-color: #2e2d2d; */
   z-index: 1000;
   transition: all 0.3s ease-out;
   transform: scaleY(0);

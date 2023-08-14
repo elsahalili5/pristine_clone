@@ -4,7 +4,6 @@ const email_regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z
 function registerUser() {
   var email = document.getElementById("email").value;
 
-  console.log(email);
   var pass = document.getElementById("pwd").value;
   var userName = document.getElementById("username").value;
   var lastName = document.getElementById("lName").value;
@@ -27,7 +26,7 @@ function registerUser() {
 function submitRegisterForm() {
   const users = JSON.parse(localStorage.getItem("users")) || [];
   var email = document.getElementById("email").value;
-  console.log(email);
+
   if (document.Formfill.FirstName.value === "") {
     document.getElementById("result-p").innerHTML = "Enter First Name*";
     document.getElementById("result").style.visibility = "visible";
@@ -41,10 +40,12 @@ function submitRegisterForm() {
   } else if (users.find((user) => user.email == email)) {
     document.getElementById("result-p").innerHTML = "Email is already in use.";
     document.getElementById("result").style.visibility = "visible";
+
     return false;
   } else if (document.Formfill.Password.value === "") {
     document.getElementById("result-p").innerHTML = "Enter your Password*";
     document.getElementById("result").style.visibility = "visible";
+
     return false;
   } else if (document.Formfill.Password.value.length < 6) {
     document.getElementById("result-p").innerHTML = " Password must be at least 6-digits*";
@@ -55,6 +56,7 @@ function submitRegisterForm() {
     document.getElementById("result-p").innerHTML = "";
     document.getElementById("result").style.visibility = "hidden";
     registerUser();
+
     return true;
   }
 }
