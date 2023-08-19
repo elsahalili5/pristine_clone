@@ -52,7 +52,7 @@
 }
 .btn-grey {
   padding: 10px;
-  width: 100%;
+  width: 90%;
 }
 
 .back-link {
@@ -197,4 +197,10 @@
 .modal_header {
   display: flex;
   flex-direction: row-reverse;
+}
+
+@media (max-width: 1000px) {
+  .modal-content {
+    width: 90%;
+  }
 }

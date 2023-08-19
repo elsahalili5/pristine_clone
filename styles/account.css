@@ -215,6 +215,15 @@ td:first-child {
   height: 110px;
   width: 100px;
 }
+@media only screen and (max-width: 1300px) {
+  .orders-container .browse-products-container {
+    margin-top: 20px;
+  }
+
+  .modal-inner {
+    width: 90%;
+  }
+}
 
 @media only screen and (max-width: 800px) {
   .profile-info {
@@ -243,5 +252,10 @@ td:first-child {
   }
   table {
     margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .order-details-container {
+    flex-direction: column;
   }
 }

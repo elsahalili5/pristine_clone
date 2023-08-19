@@ -69,6 +69,9 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             customModal.style.display = "block";
+            var bodyElement = document.body;
+
+            bodyElement.style.overflow = "hidden";
             document.getElementById("order-total").textContent = order.total.toFixed(2);
           }
 
@@ -79,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       closeCustomModal.addEventListener("click", function () {
         customModal.style.display = "none";
+        bodyElement.style.overflow = "scroll";
       });
     }
   } else {

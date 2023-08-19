@@ -101,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
             input.classList.remove("input-error");
           }
         });
+        // document.getElementById("errors-container").style.marginTop = "100px";
       }
 
       if (!hasError) {

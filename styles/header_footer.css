@@ -141,7 +141,7 @@ main {
   }
   .menu-icon {
     display: block;
-    z-index: 9999;
+    z-index: 1000;
   }
   /* .active ul li:nth-child(5) a::after {
     content: "LOGIN";
@@ -165,7 +165,7 @@ main {
   }
   .show-x {
     display: block !important;
-    z-index: 9999;
+    z-index: 1000;
   }
   .right-nav ul {
     height: 100%;
@@ -183,7 +183,7 @@ main {
     justify-content: center;
   }
   .logo {
-    z-index: 9999;
+    z-index: 1000;
   }
   .footer {
     grid-template-columns: repeat(2, 2fr);
