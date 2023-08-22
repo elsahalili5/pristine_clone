@@ -5,7 +5,8 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
 let userMessage = null;
-const API_KEY = "https://api.openai.com/v1/completions";
+const API_KEY = "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";
+const API_URL = "https://api.openai.com/v1/chat/completions";
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
@@ -19,7 +20,6 @@ const createChatLi = (message, className) => {
 };
 
 const generateResponse = (chatElement) => {
-  const API_URL = "https://api.openai.com/v1/chat/completions";
   const messageElement = chatElement.querySelector("p");
 
   const requestOptions = {
@@ -37,11 +37,12 @@ const generateResponse = (chatElement) => {
   fetch(API_URL, requestOptions)
     .then((res) => res.json())
     .then((data) => {
+      console.log("data", data);
       messageElement.textContent = data.choices[0].message.content.trim();
     })
     .catch(() => {
       messageElement.classList.add("error");
-      messageElement.textContent = "Oops! Something went wrong. Please try again.";
+      messageElement.textContent = "Chat license key expired!";
     })
     .finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
 };
@@ -77,5 +78,22 @@ chatInput.addEventListener("keydown", (e) => {
 });
 
 sendChatBtn.addEventListener("click", handleChat);
-chatCloseBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
-chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+function updateChatbotState(showChatbot) {
+  document.body.classList.toggle("show-chatbot", showChatbot);
+  localStorage.setItem("showChatbot", showChatbot);
+}
+
+chatCloseBtn.addEventListener("click", () => {
+  updateChatbotState(false);
+});
+
+chatbotToggler.addEventListener("click", () => {
+  const showChatbot = !document.body.classList.contains("show-chatbot");
+  updateChatbotState(showChatbot);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const showChatbot = localStorage.getItem("showChatbot") === "true";
+  updateChatbotState(showChatbot);
+});
