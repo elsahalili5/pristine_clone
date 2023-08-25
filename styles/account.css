@@ -180,6 +180,9 @@ td:first-child {
   font-weight: 600;
   font-size: 18px;
 }
+.order-item-details {
+  display: flex;
+}
 .order-img {
   margin: 15px 5px;
   width: 150px;
@@ -257,5 +260,16 @@ td:first-child {
 @media only screen and (max-width: 640px) {
   .order-details-container {
     flex-direction: column;
+  }
+  .order-item-details {
+    display: block;
+  }
+  .modal-inner {
+    height: 70%;
+    overflow-x: hidden;
+    padding-top: 30px;
+  }
+  .modal-close {
+    top: auto;
   }
 }

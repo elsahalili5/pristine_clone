@@ -60,10 +60,12 @@ document.addEventListener("DOMContentLoaded", function () {
               orderItemsElement.innerHTML += `
                     <div class="order-item">
                       <img  src="./images/${orderItem.image}" >
+                    <div class="order-item-details">
                       <p>${orderItem.name}</p>
                       <p>Size: ${orderItem.selectedSize}</p>
                       <p>Quantity: ${orderItem.quantity}</p>
                       <p>Price: €${orderItem.price.toFixed(2)} </p>
+                    </div>
                     </div>
                 `;
             });
