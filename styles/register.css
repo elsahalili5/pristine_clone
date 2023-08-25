@@ -5,8 +5,12 @@
   text-align: center;
 }
 
-.register-form {
+.register-container form {
   width: 500px;
+}
+.register-form {
+  display: flex;
+  flex: 1;
   height: 600px;
   background-color: black;
   font-family: "AkzidenzGrotesk-Cond";
@@ -41,15 +45,16 @@
   border: 1px solid black;
   color: black;
 }
-#result {
+.result {
   visibility: hidden;
+  display: flex;
+  justify-content: center;
 }
-#result-p {
+.result-text {
+  width: 500px;
   background-color: black;
   color: white;
   padding: 20px;
-  margin-left: 300px;
-  margin-right: 300px;
   margin-top: 50px;
   font-family: "AkzidenzGrotesk-Cond";
   font-size: 25px;
