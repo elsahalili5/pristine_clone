@@ -21,6 +21,7 @@ function registerUser() {
     email: email,
     password: pass,
   });
+  localStorage.setItem("users", JSON.stringify(users));
 }
 
 function submitRegisterForm() {

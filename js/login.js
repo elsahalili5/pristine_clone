@@ -3,7 +3,7 @@ function loginUser() {
   var enterPwd = document.getElementById("pwd").value;
 
   const users = JSON.parse(localStorage.getItem("users")) || [];
-  const user = users.find((user) => user.email === enterEmail && user.password === enterPwd);
+  const user = users.find((user) => user.email == enterEmail && user.password == enterPwd);
 
   if (!user) {
     alert("Invalid email or password");
@@ -14,7 +14,6 @@ function loginUser() {
     return false;
   }
 }
-
 function redirectToHomePage() {
   const currentURL = window.location.href;
   const newURL = currentURL.replace("login.html", "myaccount.html");
