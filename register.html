@@ -1,117 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/header_footer.css" />
-    <link rel="stylesheet" href="styles/register.css" />
-    <link rel="stylesheet" href="./styles/cart.css" />
-    <link rel="icon" href="./images/favicon.png" />
-    <title>Register - Pristine Original</title>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <nav class="navbar">
-          <div class="left-nav" id="menu-item">
-            <ul>
-              <li><a href="home.html">HOME</a></li>
-              <li><a href="shop.html">SHOP</a></li>
-              <li><a href="authenticheck.html">AUTHENTICHECK</a></li>
-              <li><a href="purpose.html">THE PURPOSE</a></li>
-              <li class="login-btn mobile-btn"><a href="login.html">LOGIN</a></li>
-              <li class="hidden myaccount-btn mobile-btn" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
-              <li class="open-cart-btn cart-btn-mobile">
-                <ion-icon name="cart-outline"></ion-icon><span class="cart-quantity">0</span>
-              </li>
-            </ul>
-          </div>
-          <div class="logo">
-            <img class="default_logo" src="./images/pristine-logo1.svg" alt="" />
-            <img class="hover_logo" src="./images/hover-logo.svg" alt="" />
-          </div>
-          <div class="right-nav" id="menu-item-right">
-            <ul>
-              <li class="hidden myaccount-btn" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
-              <li href="myaccount.html" class="hidden" id="myaccount"><span>MY ACCOUNT</span></li>
-              <li class="login-btn"><a href="login.html">LOGIN</a></li>
-              <li class="open-cart-btn">
-                <ion-icon name="cart-outline"></ion-icon><span class="cart-quantity">0</span>
-              </li>
-            </ul>
-          </div>
-          <div class="menu-icon" id="menu-toggle">
-            <img src="./images/menu.png" alt="" />
-          </div>
-          <div class="menu-icon-x" id="menu-x">
-            <img src="./images/x.svg" alt="" />
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- END HEADER HERE -->
-    <main>
-      <div class="container">
-        <div id="result" class="result">
-          <p id="result-p" class="result-text"></p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/header_footer.css" />
+  <link rel="stylesheet" href="styles/register.css" />
+  <link rel="stylesheet" href="./styles/cart.css" />
+  <link rel="icon" href="./images/favicon.png" />
+  <title>Register - Pristine Original</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <div class="left-nav" id="menu-item">
+          <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="shop.html">SHOP</a></li>
+            <li><a href="authenticheck.html">AUTHENTICHECK</a></li>
+            <li><a href="purpose.html">THE PURPOSE</a></li>
+            <li class="login-btn mobile-btn"><a href="login.html">LOGIN</a></li>
+            <li class="hidden myaccount-btn mobile-btn" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
+            <li class="open-cart-btn cart-btn-mobile">
+              <ion-icon name="cart-outline"></ion-icon><span class="cart-quantity">0</span>
+            </li>
+          </ul>
         </div>
-        <div class="register-container">
-          <form action="login.html" name="Formfill" onsubmit="return submitRegisterForm()">
-            <div class="register-form">
-              <h1>REGJISTROHU</h1>
-              <div class="register-form-row">
-                <input type="text" id="username" name="FirstName" placeholder="First name" />
-              </div>
-              <div class="register-form-row">
-                <input type="text" id="lName" name="Lname" placeholder="Last name" />
-              </div>
-              <div class="register-form-row">
-                <input type="email" id="email" name="Email" placeholder="Email address" />
-              </div>
-              <div class="register-form-row">
-                <input type="password" id="pwd" name="Password" placeholder="Password" />
-              </div>
-              <div>
-                <button type="submit">REGISTER</button>
-              </div>
+        <div class="logo">
+          <img class="default_logo" src="./images/pristine-logo1.svg" alt="" />
+          <img class="hover_logo" src="./images/hover-logo.svg" alt="" />
+        </div>
+        <div class="right-nav" id="menu-item-right">
+          <ul>
+            <li class="hidden myaccount-btn" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
+            <li href="myaccount.html" class="hidden" id="myaccount"><span>MY ACCOUNT</span></li>
+            <li class="login-btn"><a href="login.html">LOGIN</a></li>
+            <li class="open-cart-btn">
+              <ion-icon name="cart-outline"></ion-icon><span class="cart-quantity">0</span>
+            </li>
+          </ul>
+        </div>
+        <div class="menu-icon" id="menu-toggle">
+          <img src="./images/menu.png" alt="" />
+        </div>
+        <div class="menu-icon-x" id="menu-x">
+          <img src="./images/x.svg" alt="" />
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- END HEADER HERE -->
+  <main>
+    <div class="container">
+      <div id="result" class="result">
+        <p id="result-p" class="result-text"></p>
+      </div>
+      <div class="register-container">
+        <form action="login.html" name="Formfill" onsubmit="return submitRegisterForm()">
+          <div class="register-form">
+            <h1>REGJISTROHU</h1>
+            <div class="register-form-row">
+              <input type="text" id="username" name="FirstName" placeholder="First name" />
             </div>
-          </form>
-        </div>
-      </div>
-    </main>
-    <div class="cart-container" id="cart-container">
-      <div class="cart-header">
-        <h3>CART ITEMS</h3>
-        <ion-icon class="x-icon" id="x-icon" name="close-outline"></ion-icon>
-      </div>
-      <div class="cart-items" id="cart-items">
-        <div class="cart-item" id="cart-item"></div>
-      </div>
-      <div class="cart-checkout-wrapper" id="cart-checkout-wrapper">
-        <p class="cart-total">TOTAL: $<span id="cart-total-value"></span></p>
-        <button class="checkout-btn" id="checkout-btn">CHECK OUT</button>
+            <div class="register-form-row">
+              <input type="text" id="lName" name="Lname" placeholder="Last name" />
+            </div>
+            <div class="register-form-row">
+              <input type="email" id="email" name="Email" placeholder="Email address" />
+            </div>
+            <div class="register-form-row">
+              <input type="password" id="pwd" name="Password" placeholder="Password" />
+            </div>
+            <div>
+              <button type="submit">REGISTER</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
-    <!-- BEGIN FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="footer">
-          <h4>ALL RIGHTS RESERVED, PRISTINE 2023</h4>
-          <a href="">FEATURED IN GQ</a>
-          <a href="">STORE</a>
-          <div class="footer-right">
-            <a class="first-link" href="">SITE POLICY</a>
-            <a href="">TERMS OF USE</a>
-            <a href="customercare.html">CUSTOMER CARE</a>
-          </div>
+  </main>
+  <div class="cart-container" id="cart-container">
+    <div class="cart-header">
+      <h3>CART ITEMS</h3>
+      <ion-icon class="x-icon" id="x-icon" name="close-outline"></ion-icon>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-item" id="cart-item"></div>
+    </div>
+    <div class="cart-checkout-wrapper" id="cart-checkout-wrapper">
+      <p class="cart-total">TOTAL: $<span id="cart-total-value"></span></p>
+      <button class="checkout-btn" id="checkout-btn">CHECK OUT</button>
+    </div>
+  </div>
+  <!-- BEGIN FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer">
+        <h4>ALL RIGHTS RESERVED, PRISTINE 2023</h4>
+        <a href="">FEATURED IN GQ</a>
+        <a href="store.html">STORE</a>
+        <div class="footer-right">
+          <a class="first-link" href="">SITE POLICY</a>
+          <a href="">TERMS OF USE</a>
+          <a href="customercare.html">CUSTOMER CARE</a>
         </div>
       </div>
-    </footer>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="./js/registration.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/shopping-cart.js"></script>
-  </body>
+    </div>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="./js/registration.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/shopping-cart.js"></script>
+</body>
+
 </html>

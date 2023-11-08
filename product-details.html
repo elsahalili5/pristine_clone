@@ -1,140 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/header_footer.css" />
-    <link rel="stylesheet" href="styles/item.css" />
-    <title>Pristine Original</title>
-    <link rel="icon" href="./images/favicon.png" />
-    <link rel="stylesheet" href="./styles/cart.css" />
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <nav class="navbar">
-          <div class="left-nav" id="menu-item">
-            <ul>
-              <li><a href="home.html">HOME</a></li>
-              <li><a href="shop.html">SHOP</a></li>
-              <li><a href="authenticheck.html">AUTHENTICHECK</a></li>
-              <li><a href="purpose.html">THE PURPOSE</a></li>
-              <li  class="login-btn mobile-btn"><a href="login.html">LOGIN</a></li>
-              <li class=" hidden myaccount-btn mobile-btn" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
 
-              <li class="open-cart-btn cart-btn-mobile"><ion-icon name="cart-outline"></ion-icon></i><span class="cart-quantity" >0</span></li>
-            </ul>
-          </div>
-          <div class="logo">
-            <img class="default_logo" src="./images/pristine-logo1.svg " alt="" />
-            <img class="hover_logo" src="./images/hover-logo.svg" alt="" />
-          </div>
-          <div class="right-nav" id="menu-item-right">
-            <ul>
-              <li class="hidden myaccount-btn" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
-              <li href="myaccount.html" class="hidden" id="myaccount"><span>MY ACCOUNT</span></li>
-              <li  class="login-btn"><a href="login.html">LOGIN</a></li>
-              <li class="open-cart-btn"><ion-icon name="cart-outline"></ion-icon></i><span class="cart-quantity" >0</span></li>
-            </ul>
-          </div>
-          <div class="menu-icon" id="menu-toggle">
-            <img src="./images/menu.png" alt="" />
-          </div>
-          <div class="menu-icon-x" id="menu-x">
-            <img src="./images/x.svg" alt="" />
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- END HEADER HERE  -->
-    <main>
-      <div class="container">
-        <a class="back-link" href="./shop.html"> < BACK</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/header_footer.css" />
+  <link rel="stylesheet" href="styles/item.css" />
+  <title>Pristine Original</title>
+  <link rel="icon" href="./images/favicon.png" />
+  <link rel="stylesheet" href="./styles/cart.css" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
 
-        <div class="item-container">
-          <div class="item-pics" id="itemPicsContainer"></div>
-          <div class="item-img">
-            <img id="mainImg" src="" alt="" />
-          </div>
-          <div class="item-description">
-            <h2 id="item-name"></h2>
-            <ul class="item-details" id="item-details-list"></ul>
-            <p id="item-description-text"></p>
-            <h4 id="shipping-info"></h4>
+<body>
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <div class="left-nav" id="menu-item">
+          <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="shop.html">SHOP</a></li>
+            <li><a href="authenticheck.html">AUTHENTICHECK</a></li>
+            <li><a href="purpose.html">THE PURPOSE</a></li>
+            <li class="login-btn mobile-btn"><a href="login.html">LOGIN</a></li>
+            <li class=" hidden myaccount-btn mobile-btn" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
 
-            <h2 id="item-price"></h2>
-            <div class="sizes" id="sizes-container">
-              <h4>SELECT SIZE <span id="selectedSizeParagraph"></span></h4>
-              <ul id="sizes-list">
-                <!-- <li id="size1">XS</li>
+            <li class="open-cart-btn cart-btn-mobile"><ion-icon name="cart-outline"></ion-icon></i><span
+                class="cart-quantity">0</span></li>
+          </ul>
+        </div>
+        <div class="logo">
+          <img class="default_logo" src="./images/pristine-logo1.svg " alt="" />
+          <img class="hover_logo" src="./images/hover-logo.svg" alt="" />
+        </div>
+        <div class="right-nav" id="menu-item-right">
+          <ul>
+            <li class="hidden myaccount-btn" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
+            <li href="myaccount.html" class="hidden" id="myaccount"><span>MY ACCOUNT</span></li>
+            <li class="login-btn"><a href="login.html">LOGIN</a></li>
+            <li class="open-cart-btn"><ion-icon name="cart-outline"></ion-icon></i><span class="cart-quantity">0</span>
+            </li>
+          </ul>
+        </div>
+        <div class="menu-icon" id="menu-toggle">
+          <img src="./images/menu.png" alt="" />
+        </div>
+        <div class="menu-icon-x" id="menu-x">
+          <img src="./images/x.svg" alt="" />
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- END HEADER HERE  -->
+  <main>
+    <div class="container">
+      <a class="back-link" href="./shop.html">
+        < BACK</a>
+
+          <div class="item-container">
+            <div class="item-pics" id="itemPicsContainer"></div>
+            <div class="item-img">
+              <img id="mainImg" src="" alt="" />
+            </div>
+            <div class="item-description">
+              <h2 id="item-name"></h2>
+              <ul class="item-details" id="item-details-list"></ul>
+              <p id="item-description-text"></p>
+              <h4 id="shipping-info"></h4>
+
+              <h2 id="item-price"></h2>
+              <div class="sizes" id="sizes-container">
+                <h4>SELECT SIZE <span id="selectedSizeParagraph"></span></h4>
+                <ul id="sizes-list">
+                  <!-- <li id="size1">XS</li>
                 <li id="size2">S</li>
                 <li id="size3">M</li>
                 <li id="size4">L</li>
                 <li id="size5">XL</li> -->
-              </ul>
-              <h4 id="clear-btn" class="hidden clear-btn">CLEAR</h4>
-            </div>
+                </ul>
+                <h4 id="clear-btn" class="hidden clear-btn">CLEAR</h4>
+              </div>
 
-            <div class="btn-container">
-              <button class="btn-grey" id="add-item-btn">ADD TO CART</button>
+              <div class="btn-container">
+                <button class="btn-grey" id="add-item-btn">ADD TO CART</button>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-  <div id="sizeModal" class="custom-modal">
-  <div class="modal-content">
-    <div class="modal_header">
-      <span class="custom-close">&times;</span>
     </div>
-    <p class="modal-message"></p>
+    <div id="sizeModal" class="custom-modal">
+      <div class="modal-content">
+        <div class="modal_header">
+          <span class="custom-close">&times;</span>
+        </div>
+        <p class="modal-message"></p>
+      </div>
+    </div>
+  </main>
+  <!-- Cart sidebar -->
+  <div class="cart-container" id="cart-container">
+    <div class="cart-header">
+      <h3>CART ITEMS</h3>
+      <ion-icon class="x-icon" id="x-icon" name="close-outline"></ion-icon>
+    </div>
+
+    <div class="cart-items" id="cart-items">
+      <div class="cart-item" id="cart-item"></div>
+    </div>
+    <div class="cart-checkout-wrapper" id="cart-checkout-wrapper">
+
+      <!-- <div> -->
+      <p class="cart-total">TOTAL: $<span id="cart-total-value"></span></p>
+      <!-- </div> -->
+
+      <button class="checkout-btn" id="checkout-btn">CHECK OUT</button>
+    </div>
   </div>
-</div>
-    </main>
-    <!-- Cart sidebar -->
-    <div class="cart-container" id="cart-container">
-      <div class="cart-header">
-        <h3>CART ITEMS</h3>
-        <ion-icon class="x-icon" id="x-icon" name="close-outline"></ion-icon>
-      </div>
+  <!-- end of cart sidebar -->
 
-      <div class="cart-items" id="cart-items">
-        <div class="cart-item" id="cart-item"></div>
-      </div>
-      <div class="cart-checkout-wrapper" id="cart-checkout-wrapper">
+  <!-- BEGIN FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer">
+        <h4>ALL RIGHTS RESERVED, PRISTINE 2023</h4>
+        <a href="">FEATURED IN GQ</a>
+        <a href="store.html">STORE</a>
 
-        <!-- <div> -->
-        <p class="cart-total">TOTAL: $<span id="cart-total-value"></span></p>
-        <!-- </div> -->
+        <div class="footer-right">
+          <a class="first-link" href="">SITE POLICY</a>
 
-        <button class="checkout-btn" id="checkout-btn">CHECK OUT</button>
-      </div>
-    </div>
-    <!-- end of cart sidebar -->
-
-    <!-- BEGIN FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="footer">
-          <h4>ALL RIGHTS RESERVED, PRISTINE 2023</h4>
-          <a href="">FEATURED IN GQ</a>
-          <a href="">STORE</a>
-
-          <div class="footer-right">
-            <a class="first-link" href="">SITE POLICY</a>
-
-            <a href="">TERMS OF USE</a>
-            <a href="customercare.html">CUSTOMER CARE</a>
-          </div>
+          <a href="">TERMS OF USE</a>
+          <a href="customercare.html">CUSTOMER CARE</a>
         </div>
       </div>
-    </footer>
-    <script src="./js/main.js"></script>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
 
-    <script src="./js/data/products.js"></script>
-    <script src="./js/shopping-cart.js"></script>
-    <script src="./js/product-details.js"></script>
-  </body>
+  <script src="./js/data/products.js"></script>
+  <script src="./js/shopping-cart.js"></script>
+  <script src="./js/product-details.js"></script>
+</body>
+
 </html>
