@@ -14,10 +14,11 @@
   font-size: 15px;
   margin-bottom: 10px;
   border: 1px solid #000;
-  font-family: akzidenz-grotesk_bqextended;
   margin-bottom: 18px;
   margin-left: 5px;
+  font-family: "AkzidenzGrotesk-Cond";
 }
+
 .form-title {
   font-weight: 200;
   margin: 20px;

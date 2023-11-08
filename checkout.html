@@ -10,10 +10,17 @@
     <link rel="stylesheet" href="./styles/header_footer.css" />
     <link rel="stylesheet" href="./styles/checkout.css" />
     <link rel="stylesheet" href="./styles/cart.css" />
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
+    <!-- BEGIN HEADER -->
     <header>
       <div class="container">
         <nav class="navbar">
@@ -23,22 +30,40 @@
               <li><a href="shop.html">SHOP</a></li>
               <li><a href="authenticheck.html">AUTHENTICHECK</a></li>
               <li><a href="purpose.html">THE PURPOSE</a></li>
-              <li  class="login-btn mobile-btn"><a href="login.html">LOGIN</a></li>
-              <li class=" hidden myaccount-btn mobile-btn" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
+              <li class="login-btn mobile-btn">
+                <a href="login.html">LOGIN</a>
+              </li>
+              <li class="hidden myaccount-btn mobile-btn" id="myaccount">
+                <a href="myaccount.html">MY ACCOUNT</a>
+              </li>
 
-              <li class="open-cart-btn cart-btn-mobile"><ion-icon name="cart-outline"></ion-icon></i><span class="cart-quantity" >0</span></li>
+              <li class="open-cart-btn cart-btn-mobile">
+                <ion-icon name="cart-outline"></ion-icon
+                ><span class="cart-quantity">0</span>
+              </li>
             </ul>
           </div>
           <div class="logo">
-            <img class="default_logo" src="./images/pristine-logo1.svg " alt="" />
+            <img
+              class="default_logo"
+              src="./images/pristine-logo1.svg "
+              alt=""
+            />
             <img class="hover_logo" src="./images/hover-logo.svg" alt="" />
           </div>
           <div class="right-nav" id="menu-item-right">
             <ul>
-              <li class="hidden myaccount-btn" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
-              <li href="myaccount.html" class="hidden" id="myaccount"><span>MY ACCOUNT</span></li>
-              <li  class="login-btn"><a href="login.html">LOGIN</a></li>
-              <li class="open-cart-btn"><ion-icon name="cart-outline"></ion-icon></i><span class="cart-quantity" >0</span></li>
+              <li class="hidden myaccount-btn" id="myaccount">
+                <a href="myaccount.html">MY ACCOUNT</a>
+              </li>
+              <li href="myaccount.html" class="hidden" id="myaccount">
+                <span>MY ACCOUNT</span>
+              </li>
+              <li class="login-btn"><a href="login.html">LOGIN</a></li>
+              <li class="open-cart-btn">
+                <ion-icon name="cart-outline"></ion-icon
+                ><span class="cart-quantity">0</span>
+              </li>
             </ul>
           </div>
           <div class="menu-icon" id="menu-toggle">
@@ -51,65 +76,118 @@
       </div>
     </header>
     <!-- END HEADER HERE -->
-    <!-- BEGIN MAIN -->
 
+    <!-- BEGIN MAIN -->
     <main>
       <div class="container">
         <div class="checkout-form" id="checkout-form">
-     <div class="errors-container" id="errors-container" >
-    <ul id="errors">
-    </ul>
-  </div>
-
-          <h3 class="form-title">Billing address</h3>
-          <div>
-            <input type="text" class="input" name="billing-first-name" id="billing-first-name" placeholder="First name" value="" />
-            <input type="text" class="input" name="billing-last-name" id="billing-last-name" placeholder="Last name" value="" />
+          <div class="errors-container" id="errors-container">
+            <ul id="errors"></ul>
           </div>
+          <h3 class="form-title">Billing address</h3>
+
+          <div>
+            <input
+              type="text"
+              class="input"
+              name="billing-first-name"
+              id="billing-first-name"
+              placeholder="First name"
+              value=""
+            />
+            <input
+              type="text"
+              class="input"
+              name="billing-last-name"
+              id="billing-last-name"
+              placeholder="Last name"
+              value=""
+            />
+          </div>
+
           <div>
             <select name="billing-country" id="billing-country" class="input">
               <option value="">Select a country</option>
-          </select>
             </select>
-            <input type="text" class="input" name="billing-address" id="billing-address" placeholder="Address" value="" />
+            <input
+              type="text"
+              class="input"
+              name="billing-address"
+              id="billing-address"
+              placeholder="Address"
+              value=""
+            />
           </div>
           <div>
-            <input type="text" class="input" name="billing-city" id="billing-city" placeholder="City" value="" />
-            <input type="text" class="input" name="billing-postcode" id="billing-postcode" placeholder="Postal code" value="" />
+            <input
+              type="text"
+              class="input"
+              name="billing-city"
+              id="billing-city"
+              placeholder="City"
+              value=""
+            />
+            <input
+              type="text"
+              class="input"
+              name="billing-postcode"
+              id="billing-postcode"
+              placeholder="Postal code"
+              value=""
+            />
           </div>
           <div>
-            <input type="number" class="input" name="billing-phone" id="billing-phone" placeholder="Phone" value="" />
-            <input type="email" class="input" name="billing-email" id="billing-email" placeholder="Email" value="" />
+            <input
+              type="number"
+              class="input"
+              name="billing-phone"
+              id="billing-phone"
+              placeholder="Phone"
+              value=""
+            />
+            <input
+              type="email"
+              class="input"
+              name="billing-email"
+              id="billing-email"
+              placeholder="Email"
+              value=""
+            />
           </div>
         </div>
-        <div class="checkout-cart-container" id="checkout-cart-container">
-          <div class="ordered-items" id="ordered-items">
-           
-          </div>
-          <div id="checkout-cart-footer">
 
-          <div class="total-container">
-            <p>TOTAL: <span>€<span id="subtotal"></span></p></span>
-          </div>
-          <div class="payment-container" id="payment-container">
-             <div class="credit-card-checkbox" ><input id="credit-card-checkbox" type="checkbox" checked  /><img src="https://clipground.com/images/credit-card-logos-png-15.png" alt="" /> </div>
-               <div class="paypal-checkbox" ><input id="paypal-checkbox" type="checkbox" /><img src="https://images.squarespace-cdn.com/content/v1/555fcedae4b08b2ebc651e8f/1533241296334-UYKRVUGIVIF3AUKH0CFI/paypal-logo.png" alt="" /> </div>
+        <div class="checkout-cart-container" id="checkout-cart-container">
+          <div class="ordered-items" id="ordered-items"></div>
+          <div id="checkout-cart-footer">
+            <div class="total-container">
+              <p>
+                TOTAL: <span> € <span id="subtotal"></span> </span>
+              </p>
+            </div>
+
+            <div class="payment-container" id="payment-container">
+              <div class="credit-card-checkbox">
+                <input id="credit-card-checkbox" type="checkbox" checked /><img
+                  src="https://clipground.com/images/credit-card-logos-png-15.png"
+                  alt=""
+                />
+              </div>
+              <div class="paypal-checkbox">
+                <input id="paypal-checkbox" type="checkbox" /><img
+                  src="https://images.squarespace-cdn.com/content/v1/555fcedae4b08b2ebc651e8f/1533241296334-UYKRVUGIVIF3AUKH0CFI/paypal-logo.png"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
           <div class="order-btn-container">
-              <button class="order-btn" id="order-btn">PLACE ORDER</button>
-
+            <button class="order-btn" id="order-btn">PLACE ORDER</button>
           </div>
-                      
-        </div>
         </div>
       </div>
-      
-      
-      
     </main>
-    
 
-    <!-- Cart sidebar -->
+    <!-- CART SIDEBAR -->
     <div class="cart-container" id="cart-container">
       <div class="cart-header">
         <h3>CART ITEMS</h3>
@@ -121,7 +199,6 @@
       </div>
 
       <div class="cart-checkout-wrapper" id="cart-checkout-wrapper">
-     
         <!-- <div> -->
         <p class="cart-total">TOTAL: $<span id="cart-total-value"></span></p>
         <!-- </div> -->
@@ -129,8 +206,9 @@
         <button class="checkout-btn" id="checkout-btn">CHECK OUT</button>
       </div>
     </div>
-    <!-- end of cart sidebar -->
+    <!-- END OF CART SIDEBAR -->
 
+    <!-- FOOTER -->
     <footer>
       <div class="container">
         <div class="footer">
@@ -149,6 +227,7 @@
         </div>
       </div>
     </footer>
+    <!-- END OF FOOTER -->
     <script src="./js/main.js"></script>
     <script src="./js/shopping-cart.js"></script>
     <script src="./js/data/countries.js"></script>

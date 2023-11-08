@@ -174,7 +174,7 @@ td:first-child {
   display: flex;
   align-items: center;
   border-radius: 10px;
-  box-shadow: 0px 2px 10px #050505;
+  border: 1px solid #000;
   margin: 10px 10px;
   padding: 5px 20px;
   font-weight: 600;
