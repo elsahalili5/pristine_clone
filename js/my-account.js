@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const loggedInUserData = JSON.parse(localStorage.getItem("loggedInUser"));
   const allOrders = JSON.parse(localStorage.getItem("orderedItems")) || [];
-  const myOrders = allOrders.filter((item) => item.user.email === loggedInUserData.email);
+  const myOrders = allOrders.filter(
+    (item) => item.user.email === loggedInUserData.email
+  );
 
   if (myOrders.length > 0) {
     if (orderHistoryElement) {
@@ -19,7 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
           <td>${itemNames}</td>
           <td>${order.date}</td>
           <td>€${order.total.toFixed(2)}</td>
-          <td><button class="view-btn" data-orderId="${order.id}">VIEW</button></td>
+          <td><button class="view-btn" data-orderId="${
+            order.id
+          }">VIEW</button></td>
         `;
 
         orderHistoryElement.appendChild(newRow);
@@ -74,11 +78,13 @@ document.addEventListener("DOMContentLoaded", function () {
             var bodyElement = document.body;
 
             bodyElement.style.overflow = "hidden";
-            document.getElementById("order-total").textContent = order.total.toFixed(2);
+            document.getElementById("order-total").textContent =
+              order.total.toFixed(2);
           }
 
           customModal.style.display = "block";
-          document.getElementById("order-total").textContent = order.total.toFixed(2);
+          document.getElementById("order-total").textContent =
+            order.total.toFixed(2);
         });
       });
 

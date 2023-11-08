@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="./styles/header_footer.css" />
     <link rel="stylesheet" href="./styles/order.css" />
     <link rel="stylesheet" href="./styles/cart.css" />
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
+
   <body>
     <header>
       <div class="container">
@@ -21,22 +28,41 @@
               <li><a href="shop.html">SHOP</a></li>
               <li><a href="authenticheck.html">AUTHENTICHECK</a></li>
               <li><a href="purpose.html">THE PURPOSE</a></li>
-              <li  class="login-btn mobile-btn"><a href="login.html">LOGIN</a></li>
-              <li class=" hidden myaccount-btn mobile-btn" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
+              <li class="login-btn mobile-btn">
+                <a href="login.html">LOGIN</a>
+              </li>
+              <li class="hidden myaccount-btn mobile-btn" id="myaccount">
+                <a href="myaccount.html">MY ACCOUNT</a>
+              </li>
 
-              <li class="open-cart-btn cart-btn-mobile"><ion-icon name="cart-outline"></ion-icon></i><span class="cart-quantity" >0</span></li>
+              <li class="open-cart-btn cart-btn-mobile">
+                <i><ion-icon name="cart-outline"></ion-icon></i
+                ><span class="cart-quantity">0</span>
+              </li>
             </ul>
           </div>
+
           <div class="logo">
-            <img class="default_logo" src="./images/pristine-logo1.svg " alt="" />
+            <img
+              class="default_logo"
+              src="./images/pristine-logo1.svg "
+              alt=""
+            />
             <img class="hover_logo" src="./images/hover-logo.svg" alt="" />
           </div>
           <div class="right-nav" id="menu-item-right">
             <ul>
-              <li class="hidden myaccount-btn" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
-              <li href="myaccount.html" class="hidden" id="myaccount"><span>MY ACCOUNT</span></li>
-              <li  class="login-btn"><a href="login.html">LOGIN</a></li>
-              <li class="open-cart-btn"><ion-icon name="cart-outline"></ion-icon></i><span class="cart-quantity" >0</span></li>
+              <li class="hidden myaccount-btn" id="myaccount">
+                <a href="myaccount.html">MY ACCOUNT</a>
+              </li>
+              <li href="myaccount.html" class="hidden" id="myaccount">
+                <span>MY ACCOUNT</span>
+              </li>
+              <li class="login-btn"><a href="login.html">LOGIN</a></li>
+              <li class="open-cart-btn">
+                <i><ion-icon name="cart-outline"></ion-icon></i
+                ><span class="cart-quantity">0</span>
+              </li>
             </ul>
           </div>
           <div class="menu-icon" id="menu-toggle">
@@ -49,16 +75,18 @@
       </div>
     </header>
     <!-- END HEADER HERE -->
+
     <main>
-        <div class="container">
+      <div class="container">
         <div class="confirmation-message">
           <p>Thank you for your order !</p>
           <p>Your order has been successfully placed.</p>
-          <a class="order-link" href="myaccount.html">Click here to view your order details.</a>
+          <a class="order-link" href="myaccount.html"
+            >Click here to view your order details.</a
+          >
         </div>
-    </div>
-  </main>
-
+      </div>
+    </main>
 
     <!-- Cart sidebar -->
     <div class="cart-container" id="cart-container">
@@ -100,6 +128,7 @@
         </div>
       </div>
     </footer>
+
     <script src="./js/main.js"></script>
     <script src="./js/shopping-cart.js"></script>
   </body>

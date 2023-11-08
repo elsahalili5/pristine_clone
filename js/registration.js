@@ -1,5 +1,6 @@
 const valid_reg_ex = /^[A-Za-z]+$/;
-const email_regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const email_regex =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 function registerUser() {
   var email = document.getElementById("email").value;
@@ -49,7 +50,8 @@ function submitRegisterForm() {
 
     return false;
   } else if (document.Formfill.Password.value.length < 6) {
-    document.getElementById("result-p").innerHTML = " Password must be at least 6-digits*";
+    document.getElementById("result-p").innerHTML =
+      " Password must be at least 6-digits*";
     document.getElementById("result").style.visibility = "visible";
 
     return false;

@@ -41,12 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
     logOutBtn.classList.remove("hidden");
     logOutBtn.addEventListener("click", function () {
       localStorage.removeItem("loggedInUser");
-      window.location.href = window.location.href.replace("myaccount.html", "login.html");
+      window.location.href = window.location.href.replace(
+        "myaccount.html",
+        "login.html"
+      );
     });
   }
 
   if (username) {
-    username.textContent = loggedInUserData.username + " " + loggedInUserData.lastname;
+    username.textContent =
+      loggedInUserData.username + " " + loggedInUserData.lastname;
   }
 
   if (userEmail) {

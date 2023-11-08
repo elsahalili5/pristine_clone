@@ -48,7 +48,9 @@ function openShoppingCart() {
 
 function updateCartMenuItemQuantity() {
   const cartItems = JSON.parse(localStorage.getItem("cartItems"));
-  const cartQuantityElements = document.querySelectorAll(".open-cart-btn > span");
+  const cartQuantityElements = document.querySelectorAll(
+    ".open-cart-btn > span"
+  );
 
   if (cartItems && cartQuantityElements) {
     let total = 0;
@@ -57,7 +59,9 @@ function updateCartMenuItemQuantity() {
       total += cartItem.quantity;
     });
 
-    cartQuantityElements.forEach((cartElement) => (cartElement.innerHTML = total));
+    cartQuantityElements.forEach(
+      (cartElement) => (cartElement.innerHTML = total)
+    );
   }
 }
 
@@ -75,7 +79,8 @@ function renderCartItems() {
     if (cartItems.length === 0) {
       const emptyCartMessage = document.createElement("div");
       emptyCartMessage.classList.add("empty-cart-message");
-      emptyCartMessage.innerHTML = "<p>You have no items in your shopping cart.</p>";
+      emptyCartMessage.innerHTML =
+        "<p>You have no items in your shopping cart.</p>";
       cartItemsContainer.appendChild(emptyCartMessage);
       cartCheckoutWrapper.style.display = "none";
     } else {
@@ -87,14 +92,22 @@ function renderCartItems() {
         itemElement.classList.add("cart-item");
 
         itemElement.innerHTML = `
-     <ion-icon class="x-btn" id="x-btn-${cartItem.id}" name="close-outline"></ion-icon>
+     <ion-icon class="x-btn" id="x-btn-${
+       cartItem.id
+     }" name="close-outline"></ion-icon>
 
       <div class="image-box">
         <img src="images/${cartItem.image}" alt="" />
         <div class="product-quantity">
-          <button class="quantity-btn" id="decrease-btn-${cartItem.id}">-</button>
-          <p class="item-quantity" id="quantity-${cartItem.id}">${cartItem.quantity}</p>
-          <button class="quantity-btn" id="increase-btn-${cartItem.id}">+</button>
+          <button class="quantity-btn" id="decrease-btn-${
+            cartItem.id
+          }">-</button>
+          <p class="item-quantity" id="quantity-${cartItem.id}">${
+          cartItem.quantity
+        }</p>
+          <button class="quantity-btn" id="increase-btn-${
+            cartItem.id
+          }">+</button>
         </div>
       </div>
       <div class="left">
@@ -106,7 +119,9 @@ function renderCartItems() {
     `;
         cartItemsContainer.appendChild(itemElement);
 
-        const removeProductBtn = document.getElementById(`x-btn-${cartItem.id}`);
+        const removeProductBtn = document.getElementById(
+          `x-btn-${cartItem.id}`
+        );
         if (removeProductBtn) {
           removeProductBtn.addEventListener("click", function () {
             cartItems.splice(index, 1);
@@ -115,7 +130,9 @@ function renderCartItems() {
           });
         }
 
-        const increaseBtn = document.getElementById(`increase-btn-${cartItem.id}`);
+        const increaseBtn = document.getElementById(
+          `increase-btn-${cartItem.id}`
+        );
         if (increaseBtn) {
           increaseBtn.addEventListener("click", function () {
             cartItem.quantity += 1;
@@ -124,7 +141,9 @@ function renderCartItems() {
           });
         }
 
-        const decreaseBtn = document.getElementById(`decrease-btn-${cartItem.id}`);
+        const decreaseBtn = document.getElementById(
+          `decrease-btn-${cartItem.id}`
+        );
         if (decreaseBtn) {
           decreaseBtn.addEventListener("click", function () {
             if (cartItem.quantity > 1) {

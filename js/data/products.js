@@ -111,7 +111,8 @@ const products = [
   {
     id: 4,
     image: "rrosa-limited.jpg",
-    hoverImage: "https://prstine.com/wp-content/uploads/2022/01/Duksibacklweb.jpg",
+    hoverImage:
+      "https://prstine.com/wp-content/uploads/2022/01/Duksibacklweb.jpg",
     name: "RROSA LIMITED",
     price: 99.0,
     quantity: 0,
@@ -150,7 +151,8 @@ const products = [
   {
     id: 5,
     image: "magentahoodie.jpg",
-    hoverImage: "https://prstine.com/wp-content/uploads/2022/11/Magenta1-1-scaled.jpg",
+    hoverImage:
+      "https://prstine.com/wp-content/uploads/2022/11/Magenta1-1-scaled.jpg",
     name: " MAGENTA HOODIE",
     price: 119.0,
     quantity: 0,
@@ -182,7 +184,8 @@ const products = [
   {
     id: 6,
     image: "massivehoodie.jpg",
-    hoverImage: "https://prstine.com/wp-content/uploads/2022/11/Massive2-1-scaled.jpg",
+    hoverImage:
+      "https://prstine.com/wp-content/uploads/2022/11/Massive2-1-scaled.jpg",
     name: "MASSIVE HOODIE",
     price: 100.0,
     quantity: 0,
@@ -219,7 +222,8 @@ const products = [
   {
     id: 7,
     image: "diplomat-shirt.jpg",
-    hoverImage: "https://prstine.com/wp-content/uploads/2022/11/Diplomat2-scaled.jpg",
+    hoverImage:
+      "https://prstine.com/wp-content/uploads/2022/11/Diplomat2-scaled.jpg",
     name: "DIMPLOMAT SHIRT",
     price: 1190.0,
     quantity: 0,
@@ -260,7 +264,8 @@ const products = [
   {
     id: 8,
     image: "college-longsleeve.jpg",
-    hoverImage: "https://prstine.com/wp-content/uploads/2022/11/College2-1-768x1152.jpg",
+    hoverImage:
+      "https://prstine.com/wp-content/uploads/2022/11/College2-1-768x1152.jpg",
     name: "COLLEGE LONG SLEEVE",
     price: 79.0,
     quantity: 0,
@@ -293,7 +298,8 @@ const products = [
   {
     id: 9,
     image: "kllasike-virgin-hoodie.jpg",
-    hoverImage: "https://prstine.com/wp-content/uploads/2022/03/1117G1A3563.jpg",
+    hoverImage:
+      "https://prstine.com/wp-content/uploads/2022/03/1117G1A3563.jpg",
     name: "KLLASIKË VIRGIN HOODIE",
     price: 149.0,
     quantity: 0,
@@ -332,7 +338,8 @@ const products = [
   {
     id: 10,
     image: "krewnekvirgin.jpg",
-    hoverImage: "https://prstine.com/wp-content/uploads/2021/02/7G1A3880-e1615622605227.jpg",
+    hoverImage:
+      "https://prstine.com/wp-content/uploads/2021/02/7G1A3880-e1615622605227.jpg",
     name: "KREWNEK VIRGIN",
     price: 129.0,
     quantity: 0,
@@ -368,7 +375,8 @@ const products = [
   {
     id: 11,
     image: "loose-virgin.jpg",
-    hoverImage: "https://prstine.com/wp-content/uploads/2021/07/7G1A5630A-scaled-e1626160221368.jpg",
+    hoverImage:
+      "https://prstine.com/wp-content/uploads/2021/07/7G1A5630A-scaled-e1626160221368.jpg",
     name: "LOOSE TEE VIRGIN",
     price: 89.0,
     quantity: 0,
@@ -403,7 +411,8 @@ const products = [
   {
     id: 12,
     image: "krewnekblack.jpg",
-    hoverImage: "https://prstine.com/wp-content/uploads/2022/03/7G1A38281-scaled.jpg",
+    hoverImage:
+      "https://prstine.com/wp-content/uploads/2022/03/7G1A38281-scaled.jpg",
     name: "KREWNEK BLACK",
     price: 129.0,
     quantity: 0,
@@ -438,7 +447,8 @@ const products = [
   {
     id: 13,
     image: "Kllasike-tee.jpg",
-    hoverImage: "https://prstine.com/wp-content/uploads/2021/04/resized-image-Promo-14-scaled-e1618607561916.jpeg",
+    hoverImage:
+      "https://prstine.com/wp-content/uploads/2021/04/resized-image-Promo-14-scaled-e1618607561916.jpeg",
     name: "KLLASIKË TEE BLACK",
     price: 79.0,
     quantity: 0,
@@ -471,14 +481,18 @@ const products = [
   {
     id: 14,
     image: "longsleeveblack.jpg",
-    hoverImage: "https://prstine.com/wp-content/uploads/2021/11/A50I2748_-scaled.jpg",
+    hoverImage:
+      "https://prstine.com/wp-content/uploads/2021/11/A50I2748_-scaled.jpg",
     name: "LONGSLEEVE BLACK",
     price: 79.0,
     quantity: 0,
     mainImg: "longsleeveblack.jpg",
 
     detailsLink: "product15.html",
-    itemPics: ["./images/longsleeveblack.jpg", ".https://prstine.com/wp-content/uploads/2021/11/A50I2748_-scaled.jpg"],
+    itemPics: [
+      "./images/longsleeveblack.jpg",
+      ".https://prstine.com/wp-content/uploads/2021/11/A50I2748_-scaled.jpg",
+    ],
     details: [
       "White",
       "Unisex",
@@ -504,7 +518,8 @@ const products = [
   {
     id: 15,
     image: "white-hoodie.jpg",
-    hoverImage: "https://prstine.com/wp-content/uploads/2020/05/7G1A4122-e1615622837186.jpg",
+    hoverImage:
+      "https://prstine.com/wp-content/uploads/2020/05/7G1A4122-e1615622837186.jpg",
     name: "KLLASIKË WHITE HOODIE",
     price: 129.0,
     quantity: 0,
@@ -537,7 +552,8 @@ const products = [
   {
     id: 16,
     image: "krewnekwhite.jpg",
-    hoverImage: "https://prstine.com/wp-content/uploads/2022/11/fdfdfdfd-e1668873886221.jpg",
+    hoverImage:
+      "https://prstine.com/wp-content/uploads/2022/11/fdfdfdfd-e1668873886221.jpg",
     name: "KREWNEK WHITE",
     price: 119.0,
     quantity: 0,
@@ -576,7 +592,10 @@ const products = [
     quantity: 0,
     mainImg: "tutawblack.jpg",
 
-    itemPics: ["./images/tutawblack.jpg", "https://prstine.com/wp-content/uploads/2021/11/A50I2600_-scaled.jpg"],
+    itemPics: [
+      "./images/tutawblack.jpg",
+      "https://prstine.com/wp-content/uploads/2021/11/A50I2600_-scaled.jpg",
+    ],
     details: [
       "Woman’s Sweatpants In Black",
       "100% Certified Organic Cotton",
@@ -607,7 +626,10 @@ const products = [
     quantity: 0,
     mainImg: "tutablack.jpg",
 
-    itemPics: ["./images/tutablack.jpg", "https://prstine.com/wp-content/uploads/2021/11/A50I2245_-scaled.jpg"],
+    itemPics: [
+      "./images/tutablack.jpg",
+      "https://prstine.com/wp-content/uploads/2021/11/A50I2245_-scaled.jpg",
+    ],
     details: [
       "Men’s Sweatpants In Black",
       "100% Certified Organic Cotton",
@@ -638,7 +660,10 @@ const products = [
     quantity: 0,
     mainImg: "TutaMensWhite.jpg",
 
-    itemPics: ["./images/TutaMensWhite.jpg", "https://prstine.com/wp-content/uploads/2021/11/A50I2858__-scaled.jpg"],
+    itemPics: [
+      "./images/TutaMensWhite.jpg",
+      "https://prstine.com/wp-content/uploads/2021/11/A50I2858__-scaled.jpg",
+    ],
     details: [
       "Men’s Sweatpants In Black",
       "100% Certified Organic Cotton",
@@ -669,7 +694,10 @@ const products = [
     quantity: 0,
     mainImg: "tutaWomansWhite.jpg",
 
-    itemPics: ["./images/tutaWomansWhite.jpg", "https://prstine.com/wp-content/uploads/2021/11/A50I2245_-scaled.jpg"],
+    itemPics: [
+      "./images/tutaWomansWhite.jpg",
+      "https://prstine.com/wp-content/uploads/2021/11/A50I2245_-scaled.jpg",
+    ],
     details: [
       "Woman’s Sweatpants In White",
       "100% Certified Organic Cotton",

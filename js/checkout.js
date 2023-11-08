@@ -3,7 +3,9 @@ const orderedItemsContainer = document.getElementById("ordered-items");
 const subtotalSpan = document.getElementById("subtotal");
 const orderBtn = document.getElementById("order-btn");
 const loggedInUserData = JSON.parse(localStorage.getItem("loggedInUser"));
-const checkoutInputs = document.querySelectorAll(".checkout-form input, .checkout-form select");
+const checkoutInputs = document.querySelectorAll(
+  ".checkout-form input, .checkout-form select"
+);
 const errorsElement = document.getElementById("errors");
 
 function populateCountriesSelect() {
@@ -21,8 +23,10 @@ function populateCountriesSelect() {
 function fillForm() {
   if (loggedInUserData) {
     document.getElementById("billing-email").value = loggedInUserData.email;
-    document.getElementById("billing-first-name").value = loggedInUserData.username;
-    document.getElementById("billing-last-name").value = loggedInUserData.lastname;
+    document.getElementById("billing-first-name").value =
+      loggedInUserData.username;
+    document.getElementById("billing-last-name").value =
+      loggedInUserData.lastname;
   }
 }
 
@@ -41,7 +45,9 @@ function updateCheckoutSection() {
       </div>
 
       <div class="left-side">
-        <p class="product-name">${cartItem.name}  <strong class="ordered-item-quantity">×${
+        <p class="product-name">${
+          cartItem.name
+        }  <strong class="ordered-item-quantity">×${
       cartItem.quantity
     }</strong> </p>
         <div class="bottom-side">
@@ -80,9 +86,12 @@ document.addEventListener("DOMContentLoaded", function () {
         errorsElement.innerHTML = "";
         checkoutInputs.forEach((input) => {
           if (input.id === "billing-country") {
-            const foundCountry = countries.find((country) => country.value === input.value);
+            const foundCountry = countries.find(
+              (country) => country.value === input.value
+            );
             if (foundCountry) {
-              billingDetails[input.name.replace("billing-", "")] = foundCountry.label;
+              billingDetails[input.name.replace("billing-", "")] =
+                foundCountry.label;
             }
           } else {
             billingDetails[input.name.replace("billing-", "")] = input.value;
@@ -105,8 +114,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (!hasError) {
-        const orderedItems = JSON.parse(localStorage.getItem("orderedItems")) || [];
-        const creditCardCheckbox = document.getElementById("credit-card-checkbox");
+        const orderedItems =
+          JSON.parse(localStorage.getItem("orderedItems")) || [];
+        const creditCardCheckbox = document.getElementById(
+          "credit-card-checkbox"
+        );
         const paypalCheckbox = document.getElementById("paypal-checkbox");
         let selectedPaymentMethod = "";
         let calculatedTotalPrice = 0;

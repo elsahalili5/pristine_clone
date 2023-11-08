@@ -1,224 +1,247 @@
 <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Shop-Pristine Original</title>
-        <link rel="icon" href="./images/favicon.png" />
-        <link rel="stylesheet" href="./styles/home.css" />
-        <link rel="stylesheet" href="./styles/header_footer.css" />
-        <link rel="stylesheet" href="./styles/cart.css" />
-        <link rel="stylesheet" href="./styles/account.css" />
-        <link rel="stylesheet" href="./styles/chabot.css" />
-
-      <link
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop-Pristine Original</title>
+    <link rel="icon" href="./images/favicon.png" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/header_footer.css" />
+    <link rel="stylesheet" href="./styles/cart.css" />
+    <link rel="stylesheet" href="./styles/account.css" />
+    <link rel="stylesheet" href="./styles/chabot.css" />
+    <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-      </head>
-      <header>
-        <div class="container">
-          <nav class="navbar">
-            <div class="left-nav" id="menu-item">
-              <ul>
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="shop.html">SHOP</a></li>
-                <li><a href="authenticheck.html">AUTHENTICHECK</a></li>
-                <li><a href="purpose.html">THE PURPOSE</a></li>
-                <li  class="login-btn mobile-btn"><a href="login.html">LOGIN</a></li>
-                <li class=" hidden myaccount-btn mobile-btn" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
-  
-                <li class="open-cart-btn cart-btn-mobile"><ion-icon name="cart-outline"></ion-icon></i><span class="cart-quantity" >0</span></li>
-              </ul>
-            </div>
-            <div class="logo">
-              <img class="default_logo" src="./images/pristine-logo1.svg " alt="" />
-              <img class="hover_logo" src="./images/hover-logo.svg" alt="" />
-            </div>
-            <div class="right-nav" id="menu-item-right">
-              <ul>
-                <li class="hidden myaccount-btn" id="myaccount"><a href="myaccount.html">MY ACCOUNT</a></li>
-                <li href="myaccount.html" class="hidden" id="myaccount"><span>MY ACCOUNT</span></li>
-                <li  class="login-btn"><a href="login.html">LOGIN</a></li>
-                <li class="open-cart-btn"><ion-icon name="cart-outline"></ion-icon></i><span class="cart-quantity" >0</span></li>
-              </ul>
-            </div>
-            <div class="menu-icon" id="menu-toggle">
-              <img src="./images/menu.png" alt="" />
-            </div>
-            <div class="menu-icon-x" id="menu-x">
-              <img src="./images/x.svg" alt="" />
-            </div>
-          </nav>
-        </div>
-      </header>
-      <!-- END HEADER HERE -->
-      <!-- BEGIN MAIN -->
-      <main>
-        <div class="container">
-          <div class="profile-info">
-            <div class="account-information">
-              <h2 class="myaccount">MY ACCOUNT</h2>
-              <div class="information-box">
-                <h2 id="user-name"></h2>
-                <h2 id="user-email"></h2>
-              </div>
-              <button class="hidden logout-btn" id="logout-btn"><span>LOGOUT</span></button>
-            </div>
-      
-            <div class="orders-container">
-              <div id="orders-container">
-                <p>ALL ORDERS</p>
-                <table>
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>Products</th>
-                      <th>Date</th>
-                      <th>Total</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody id="order-history"></tbody>
-                </table>
-              </div>
-              <div class="browse-products-container">
-                <a href="shop.html">Browse Products</a>
-              </div>
-            </div>
-      
-            <div class="custom-modal" id="customOrderModal">
-              <div class="modal-inner">
-                <span class="modal-close" id="closeCustomModal">&times;</span>
-                <h2>Order Details</h2>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
 
-                <div class="order-details-container">
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <div class="left-nav" id="menu-item">
+            <ul>
+              <li><a href="home.html">HOME</a></li>
+              <li><a href="shop.html">SHOP</a></li>
+              <li><a href="authenticheck.html">AUTHENTICHECK</a></li>
+              <li><a href="purpose.html">THE PURPOSE</a></li>
+              <li class="login-btn mobile-btn">
+                <a href="login.html">LOGIN</a>
+              </li>
+              <li class="hidden myaccount-btn mobile-btn" id="myaccount">
+                <a href="myaccount.html">MY ACCOUNT</a>
+              </li>
+              <li class="open-cart-btn cart-btn-mobile">
+                <i><ion-icon name="cart-outline"></ion-icon></i
+                ><span class="cart-quantity">0</span>
+              </li>
+            </ul>
+          </div>
+          <div class="logo">
+            <img
+              class="default_logo"
+              src="./images/pristine-logo1.svg"
+              alt=""
+            />
+            <img class="hover_logo" src="./images/hover-logo.svg" alt="" />
+          </div>
+          <div class="right-nav" id="menu-item-right">
+            <ul>
+              <li class="hidden myaccount-btn" id="myaccount">
+                <a href="myaccount.html">MY ACCOUNT</a>
+              </li>
+              <li class="hidden">
+                <a href="myaccount.html"><span>MY ACCOUNT</span></a>
+              </li>
+              <li class="login-btn"><a href="login.html">LOGIN</a></li>
+              <li class="open-cart-btn">
+                <i><ion-icon name="cart-outline"></ion-icon></i
+                ><span class="cart-quantity">0</span>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-icon" id="menu-toggle">
+            <img src="./images/menu.png" alt="" />
+          </div>
+          <div class="menu-icon-x" id="menu-x">
+            <img src="./images/x.svg" alt="" />
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- END HEADER HERE -->
+    <!-- BEGIN MAIN -->
+    <main>
+      <div class="container">
+        <div class="profile-info">
+          <div class="account-information">
+            <h2 class="myaccount">MY ACCOUNT</h2>
+            <div class="information-box">
+              <h2 id="user-name"></h2>
+              <h2 id="user-email"></h2>
+            </div>
+            <button class="hidden logout-btn" id="logout-btn">
+              <span>LOGOUT</span>
+            </button>
+          </div>
 
-                <ul class="order-details" >
+          <div class="orders-container">
+            <div id="orders-container">
+              <p>ALL ORDERS</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Products</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="order-history"></tbody>
+              </table>
+            </div>
+            <div class="browse-products-container">
+              <a href="shop.html">Browse Products</a>
+            </div>
+          </div>
+
+          <div class="custom-modal" id="customOrderModal">
+            <div class="modal-inner">
+              <span class="modal-close" id="closeCustomModal">&times;</span>
+              <h2>Order Details</h2>
+              <div class="order-details-container">
+                <ul class="order-details">
                   <li>
-                    <span class="label">Name:</span> 
+                    <span class="label">Name:</span>
                     <span id="usernameSpan"></span>
                   </li>
                   <li>
-                    <span class="label">Email:</span> 
+                    <span class="label">Email:</span>
                     <span id="emailSpan"></span>
                   </li>
                   <li>
-                    <span class="label">Phone:</span> 
+                    <span class="label">Phone:</span>
                     <span id="phoneSpan"></span>
                   </li>
                   <li>
-                    <span class="label">Date:</span> 
+                    <span class="label">Date:</span>
                     <span id="dateSpan"></span>
                   </li>
-              
                 </ul>
-              <ul class="order-details">
-                <li>
-                  <span class="label">Country:</span> 
-                  <span id="countrySpan"></span>
-                </li>
+                <ul class="order-details">
                   <li>
-                    <span class="label">City:</span> 
+                    <span class="label">Country:</span>
+                    <span id="countrySpan"></span>
+                  </li>
+                  <li>
+                    <span class="label">City:</span>
                     <span id="citySpan"></span>
                   </li>
                   <li>
-                    <span class="label">Address:</span> 
+                    <span class="label">Address:</span>
                     <span id="addressSpan"></span>
                   </li>
-                
                   <li>
-                    <span class="label">Payment Method </span> 
+                    <span class="label">Payment Method</span>
                     <span id="paymentMethodSpan"></span>
                   </li>
                 </ul>
               </div>
-
-                <div  class="modal-details" id="modal-details">
-                  <h2>Order Items</h2>
-                  <div class="order-items" id="order-items">
-                   
-                  </div>
-                </div>
-                <h2>Total: <span>€<span id="order-total"></span></span></h2>
+              <div class="modal-details" id="modal-details">
+                <h2>Order Items</h2>
+                <div class="order-items" id="order-items"></div>
               </div>
+              <h2>
+                Total: <span>€<span id="order-total"></span></span>
+              </h2>
             </div>
           </div>
-        </div>  
-      </main>
-    
-      <!-- Cart sidebar -->
-      <div class="cart-container" id="cart-container">
-        <div class="cart-header">
-          <h3>CART ITEMS</h3>
-          <ion-icon class="x-icon" id="x-icon" name="close-outline"></ion-icon>
         </div>
-  
-        <div class="cart-items" id="cart-items">
-          <div class="cart-item" id="cart-item"></div>
-        </div>
-  
-        <div class="cart-checkout-wrapper" id="cart-checkout-wrapper">
+      </div>
+    </main>
 
-          <!-- <div> -->
-          <p class="cart-total">TOTAL: $<span id="cart-total-value"></span></p>
-          <!-- </div> -->
-  
-          <button class="checkout-btn" id="checkout-btn">CHECK OUT</button>
+    <!-- Cart sidebar -->
+    <div class="cart-container" id="cart-container">
+      <div class="cart-header">
+        <h3>CART ITEMS</h3>
+        <ion-icon class="x-icon" id="x-icon" name="close-outline"></ion-icon>
+      </div>
+
+      <div class="cart-items" id="cart-items">
+        <div class="cart-item" id="cart-item"></div>
+      </div>
+
+      <div class="cart-checkout-wrapper" id="cart-checkout-wrapper">
+        <!-- <div> -->
+        <p class="cart-total">TOTAL: $<span id="cart-total-value"></span></p>
+        <!-- </div> -->
+
+        <button class="checkout-btn" id="checkout-btn">CHECK OUT</button>
+      </div>
+    </div>
+    <!-- end of cart sidebar -->
+
+    <div class="chat-wrapper">
+      <button class="chatbot-toggler">
+        <!-- <span class="material-symbols-rounded">mode_comment</span> -->
+        <span class="material-symbols-outlined"> comment </span>
+        <span class="material-symbols-outlined"> close </span>
+      </button>
+      <div class="chatbot">
+        <header>
+          <h2>Chatbot</h2>
+          <span class="close-btn material-symbols-outlined">close</span>
+        </header>
+        <ul class="chatbox">
+          <li class="chat incoming">
+            <span class="material-symbols-outlined">smart_toy</span>
+            <p>Hi there 👋<br />How can I help you today?</p>
+          </li>
+        </ul>
+        <div class="chat-input">
+          <textarea
+            placeholder="Enter a message..."
+            spellcheck="false"
+            required
+          ></textarea>
+          <span class="material-symbols-outlined"> send </span>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+    <!-- BEGIN FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <h4>ALL RIGHTS RESERVED, PRISTINE 2023</h4>
+          <a href="">FEATURED IN GQ</a>
+          <a href="store.html">STORE</a>
+
+          <div class="footer-right">
+            <a class="first-link" href="">SITE POLICY</a>
+            <a href="">TERMS OF USE</a>
+            <a href="customercare.html">CUSTOMER CARE</a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <p>Copyright &copy; 2023-2024 Elsa Halili</p>
         </div>
       </div>
-      <!-- end of cart sidebar -->
-  
-      <div class="chat-wrapper">
-        <button class="chatbot-toggler">
-          <!-- <span class="material-symbols-rounded">mode_comment</span> -->
-          <span class="material-symbols-outlined"> comment </span>
-          <span class="material-symbols-outlined"> close </span>
-        </button>
-        <div class="chatbot">
-          <header>
-            <h2>Chatbot</h2>
-            <span class="close-btn material-symbols-outlined">close</span>
-          </header>
-          <ul class="chatbox">
-            <li class="chat incoming">
-              <span class="material-symbols-outlined">smart_toy</span>
-              <p>Hi there 👋<br />How can I help you today?</p>
-            </li>
-          </ul>
-          <div class="chat-input">
-            <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-            <span class="material-symbols-outlined"> send </span>
-          </div>
-          <!-- </div> -->
-        </div>
-      </div>
-      <!-- BEGIN FOOTER -->
-      <footer>
-        <div class="container">
-          <div class="footer">
-            <h4>ALL RIGHTS RESERVED, PRISTINE 2023</h4>
-            <a href="">FEATURED IN GQ</a>
-            <a href="store.html">STORE</a>
-  
-            <div class="footer-right">
-              <a class="first-link" href="">SITE POLICY</a>
-              <a href="">TERMS OF USE</a>
-              <a href="customercare.html">CUSTOMER CARE</a>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <p>Copyright &copy; 2023-2024 Elsa Halili</p>
-          </div>
-        </div>
-      </footer>
+    </footer>
     <script src="./js/chatbot.js"></script>
-      <script src="./js/main.js"></script>
-      <script src="./js/shopping-cart.js"></script>
-      <script src="./js/my-account.js"></script>
-    </body>
-  </html>
-  
+    <script src="./js/main.js"></script>
+    <script src="./js/shopping-cart.js"></script>
+    <script src="./js/my-account.js"></script>
+  </body>
+</html>

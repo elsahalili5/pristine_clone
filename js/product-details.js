@@ -69,7 +69,11 @@ function addCartBtnEventListener(product) {
   if (addToCartBtn) {
     addToCartBtn.addEventListener("click", function () {
       if (!selectedSize) {
-        showModal("Please select a size before adding this product to cart!", "sizeModal", "modal-message");
+        showModal(
+          "Please select a size before adding this product to cart!",
+          "sizeModal",
+          "modal-message"
+        );
       } else {
         addProductToShoppingCart(product, selectedSize);
       }
@@ -84,7 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const sizeListItems = document.querySelectorAll("#sizes-list li");
-  const selectedSizeParagraph = document.getElementById("selectedSizeParagraph");
+  const selectedSizeParagraph = document.getElementById(
+    "selectedSizeParagraph"
+  );
   const clearBtn = document.getElementById("clear-btn");
 
   sizeListItems.forEach((item) => {
